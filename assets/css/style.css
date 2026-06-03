@@ -52,8 +52,9 @@ h5 {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     box-shadow: var(--buttonShadow);
-
-    margin: 0.5rem;
+    width: fit-content;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .book-bord:hover {
@@ -93,16 +94,30 @@ nav {
     background: none;
 }
 
+.icon i {
+    font-size: 30px;
+}
 
 .topnav {
     background-color: var(--Blue);
     overflow: hidden;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
 }
 
-.topnav #mylinks {
+.topnav #myLinks {
     display: none;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.topnav #myLinks.open {
+    display: flex;
 }
 
 .topnav a {
@@ -115,10 +130,11 @@ nav {
 }
 
 .topnav a.icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
+    display: flex;
+    align-items: center;
+    position: static;
+    padding: 0;
+    margin-left: auto;
 }
 
 /* Card */
