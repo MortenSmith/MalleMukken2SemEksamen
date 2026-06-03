@@ -79,7 +79,7 @@ h5 {
     background-color: var(--Secondary);
     color: white;
     transition: 0.5s;
-    
+
 }
 
 /* Navbar mobil */
@@ -121,3 +121,147 @@ nav {
     top: 0;
 }
 
+/* Card */
+/* Arrangement cards */
+.arrangementer {
+    padding: var(--largeGap) 0 6rem;
+}
+
+.arrangement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: var(--buttonShadow);
+    overflow: visible;
+}
+
+.event-icon {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    background-color: var(--Secondary);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2.2rem;
+    border: 3px solid white;
+
+}
+
+.event-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.event-content {
+    padding: var(--largeGap);
+}
+
+.event-category {
+    margin-bottom: var(--smallGap);
+    color: #555;
+}
+
+.event-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--medGap);
+}
+
+.event-text {
+    margin-bottom: var(--largeGap);
+}
+
+.event-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--medGap);
+    margin-bottom: var(--largeGap);
+}
+
+.event-info p {
+    display: flex;
+    align-items: center;
+    gap: var(--medGap);
+}
+
+.event-info i {
+    font-size: 1.3rem;
+}
+
+.event-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Filter knapper til arrangment siden */
+/* FILTER KNAPPER */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+
+    margin: 4rem 0;
+}
+
+.filter-btn {
+    min-width: 140px;
+
+    padding: 0.4rem 1.5rem;
+
+    border: 2px solid var(--Blue);
+    border-radius: 6px;
+
+    background-color: transparent;
+    color: black;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Hover */
+
+.filter-btn:hover {
+    background-color: var(--Blue);
+    box-shadow: var(--buttonShadow);
+}
+
+/* Aktiv knap */
+
+.filter-btn.active {
+    background-color: var(--Blue);
+    box-shadow: var(--buttonShadow);
+}
+
+/* Fokus til accessibility */
+
+.filter-btn:focus {
+    outline: none;
+}
