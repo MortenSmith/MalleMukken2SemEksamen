@@ -4,9 +4,13 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
+    line-height: 1.5;
+}
+
+main {
     margin-left: 30px;
     margin-right: 30px;
-    line-height: 1.5;
+    background-color: var(--Primary);
 }
 
 /* Variabler */
@@ -14,11 +18,13 @@
     --Primary: #F5EFEC;
     --Secondary: #A90C43;
     --Blue: #86A0C8;
+
     --smallGap: 0.5rem;
     --medGap: 1rem;
     --largeGap: 2rem;
+
     --headerShadow: 4px 4px 4px #000000cc;
-    --buttonShadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --buttonShadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
 }
 
@@ -35,3 +41,83 @@ h4,
 h5 {
     font-family: "Playfair Display", serif;
 }
+
+/* Book bord knap */
+.book-bord {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--Secondary);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    box-shadow: var(--buttonShadow);
+
+    margin: 0.5rem;
+}
+
+.book-bord:hover {
+    background-color: white;
+    color: #A90C43;
+    transition: 0.5s;
+}
+
+/* Læs mere knap */
+.book-bord1 {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: solid var(--Secondary) 1px;
+    background-color: white;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    box-shadow: var(--buttonShadow);
+    margin: 0.5rem;
+}
+
+.book-bord1:hover {
+    background-color: var(--Secondary);
+    color: white;
+    transition: 0.5s;
+    
+}
+
+/* Navbar mobil */
+nav {
+    background-color: var(--Blue);
+}
+
+.mallemukkenlogo {
+    width: 150px;
+    height: auto;
+    background: none;
+}
+
+
+.topnav {
+    background-color: var(--Blue);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.topnav #mylinks {
+    display: none;
+}
+
+.topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
