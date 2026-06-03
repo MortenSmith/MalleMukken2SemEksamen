@@ -227,11 +227,32 @@ nav {
 
 .event-buttons {
     display: flex;
-    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.event-buttons .book-bord,
+.event-buttons .book-bord1 {
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+
+    text-decoration: none;
+}
+
+/* sørger for samme højde */
+
+.event-buttons .book-bord {
+    border: 1px solid transparent;
+}
+
+.event-buttons .book-bord1 {
+    border: 1px solid var(--Secondary);
 }
 
 /* Filter knapper til arrangment siden */
-/* FILTER KNAPPER */
 
 .filter-buttons {
     display: flex;
