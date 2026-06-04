@@ -1,4 +1,4 @@
-// Navbar 
+// Navbar
 function myFunction() {
     if (window.innerWidth < 768) {
         const links = document.getElementById("myLinks");
@@ -21,13 +21,33 @@ if (activeLink) {
     const link = document.querySelector(`#myLinks a[href="${activeLink}"]`);
     if (link) link.classList.add('active');
 }
-  const links = document.getElementById("myLinks");
-  links.classList.toggle("open");
 
+// Accordions 
+let acc = document.querySelectorAll(".accordion");
 
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        
+        // Luk alle andre
+        acc.forEach(function(otherAcc) {
+            if (otherAcc !== this) {
+                otherAcc.classList.remove("active1");
+                otherAcc.nextElementSibling.style.display = "none";
+            }
+        }.bind(this));
 
-function myFunction() {
-  const x = document.getElementById("myLinks");
-  x.style.display = x.style.display === "block" ? "none" : "block";
+        // Toggle den klikkede
+        this.classList.toggle("active1");
+        let panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
 }
 
+document.addEventListener("click", function(e) {
+    if (!e.target.closest(".accordion-item")) {
+        acc.forEach(function(otherAcc) {
+            otherAcc.classList.remove("active1");
+            otherAcc.nextElementSibling.style.display = "none";
+        });
+    }
+});
