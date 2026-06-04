@@ -55,16 +55,24 @@ h5 {
     width: fit-content;
     display: block;
     margin-bottom: 0.5rem;
+    text-decoration: none;
 }
 
-.book-bord:hover {
-    background-color: white;
-    color: #A90C43;
+.book-bord,
+.topnav .book-bord {
+    background-color: var(--Secondary);
+    color: white;
     transition: 0.5s;
 }
 
+.book-bord:hover, 
+.topnav .book-bord:hover {
+    background-color: white;
+    color: #A90C43;
+}
+
 /* Læs mere knap */
-.book-bord1 {
+.readmorebtn {
     padding: 0.5rem 1.5rem;
     border-radius: 8px;
     border: solid var(--Secondary) 1px;
@@ -74,24 +82,23 @@ h5 {
     font-weight: 500;
     box-shadow: var(--buttonShadow);
     margin: 0.5rem;
+    text-decoration: none;
 }
 
-.book-bord1:hover {
+.readmorebtn:hover {
     background-color: var(--Secondary);
     color: white;
     transition: 0.5s;
-    
 }
 
-/* Navbar mobil */
+/* Navbar */
 nav {
     background-color: var(--Blue);
 }
 
 .mallemukkenlogo {
-    width: 150px;
+    width: 200px;
     height: auto;
-    background: none;
 }
 
 .icon i {
@@ -100,24 +107,14 @@ nav {
 
 .topnav {
     background-color: var(--Blue);
-    overflow: hidden;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
-}
-
-.topnav #myLinks {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-
-}
-
-.topnav #myLinks.open {
-    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .topnav a {
@@ -137,3 +134,50 @@ nav {
     margin-left: auto;
 }
 
+/* Mobil: skjul links som standard */
+.topnav #myLinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+}
+
+.topnav #myLinks.open {
+    display: flex;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .topnav {
+        padding: 8px 32px;
+    }
+
+    .topnav .icon i {
+        display: none;
+    }
+
+    .topnav #myLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .topnav #myLinks a {
+        display: inline-block;
+        padding: 8px 12px;
+    }
+
+    .book-bord {
+        margin: 0;
+    }
+
+    .topnav #myLinks a.active {
+    border-bottom: 2px solid var(--Secondary);
+    }
+
+    .mallemukkenlogo {
+    width: 80%;
+    }
+
+}
