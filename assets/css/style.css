@@ -642,10 +642,10 @@ nav {
     resize: vertical;
 }
 
-.madudafhuset-form button {
+.madudafhuset-form .readmorebtn {
     grid-column: 1 / -1;
     width: 100%;
-    border: 1px solid white;
+    margin: 0;
 }
 
 /* mad ud af huset SLUT */
