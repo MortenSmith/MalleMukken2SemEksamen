@@ -648,4 +648,122 @@ nav {
     margin: 0;
 }
 
+/* MUAH Media querys */
+
+/* Mobil */
+
+@media (max-width: 768px) {
+
+    main {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .madudafhuset-hero img {
+        height: 400px;
+    }
+
+    .madudafhuset-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .madudafhuset-hero-content p {
+        max-width: 90%;
+    }
+
+    .madudafhuset-loesninger h2,
+    .madudafhuset-galleri h2,
+    .tilbud-section h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .madudafhuset-loesning-grid,
+    .tilbud-grid {
+        padding: 1rem 0;
+    }
+
+
+
+
+    /* Løsningskort */
+
+    .madudafhuset-loesning-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 4rem 0 1rem;
+    }
+
+    .madudafhuset-loesning-card {
+        width: 75vw;
+        min-width: 75vw;
+
+        flex-shrink: 0;
+
+    }
+
+    /* Galleri */
+
+    .madudafhuset-galleri-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+
+        padding-bottom: 1rem;
+    }
+
+    .galleri-billede,
+    .galleri-billede:nth-child(1),
+    .galleri-billede:nth-child(2),
+    .galleri-billede:nth-child(3),
+    .galleri-billede:nth-child(4),
+    .galleri-billede:nth-child(5) {
+
+        width: 220px;
+        min-width: 220px;
+        height: 250px;
+
+        grid-column: auto;
+        grid-row: auto;
+
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    /* Tilbud */
+
+    .tilbud-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+    }
+
+    .tilbud-card {
+        width: 75vw;
+        min-width: 75vw;
+
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    /* Kontakt */
+
+    .madudafhuset-kontakt {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .madudafhuset-form {
+        grid-template-columns: 1fr;
+    }
+
+    .madudafhuset-form button {
+        width: 100%;
+    }
+
+}
+
 /* mad ud af huset SLUT */
