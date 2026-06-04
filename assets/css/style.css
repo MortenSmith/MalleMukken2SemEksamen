@@ -75,7 +75,7 @@ h2 {
     transition: 0.5s;
 }
 
-.book-bord:hover, 
+.book-bord:hover,
 .topnav .book-bord:hover {
     background-color: white;
     color: #A90C43;
@@ -184,12 +184,13 @@ nav {
     }
 
     .topnav #myLinks a.active {
-    border-bottom: 2px solid var(--Secondary);
+        border-bottom: 2px solid var(--Secondary);
     }
 
     .mallemukkenlogo {
-    width: 80%;
+        width: 80%;
     }
+}
 
 /* Card */
 /* Arrangement cards */
@@ -646,3 +647,5 @@ nav {
     width: 100%;
     border: 1px solid white;
 }
+
+/* mad ud af huset SLUT */
