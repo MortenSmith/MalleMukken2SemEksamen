@@ -46,6 +46,12 @@ h5 {
     font-family: "Playfair Display", serif;
 }
 
+h2 {
+    border-bottom: 2px solid var(--Blue);
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
 /* Book bord knap */
 .book-bord {
     padding: 0.5rem 1.5rem;
@@ -307,7 +313,148 @@ nav {
     outline: none;
 }
 
-/* Mad ud af huset */
+/* Mad ud af huset START */
+
+.madudafhuset-hero {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.madudafhuset-hero img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.madudafhuset-hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--medGap);
+    text-align: center;
+    color: white;
+}
+
+.madudafhuset-hero-content h1 {
+    font-size: 4rem;
+}
+
+.madudafhuset-hero-content p {
+    max-width: 650px;
+}
+
+.madudafhuset-scroll-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--smallGap);
+    margin-top: var(--largeGap);
+    font-family: "Montserrat", sans-serif;
+}
+
+.madudafhuset-scroll-link i {
+    font-size: 1.5rem;
+}
+
+/* Løsninger */
+
+.madudafhuset-loesninger {
+    margin-bottom: 6rem;
+}
+
+.madudafhuset-loesninger h2 {
+    margin-bottom: 4rem;
+}
+
+.madudafhuset-loesning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.madudafhuset-loesning-card {
+    margin-top: 3rem;
+}
+
+/* Galleri */
+
+.madudafhuset-galleri {
+    margin-bottom: 6rem;
+}
+
+.madudafhuset-galleri h2 {
+    margin-bottom: 3rem;
+}
+
+.madudafhuset-galleri-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 300px 300px;
+    gap: var(--medGap);
+}
+
+.galleri-billede {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--buttonShadow);
+}
+
+.galleri-billede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.galleri-billede:hover img {
+    transform: scale(1.08);
+}
+
+.galleri-tekst {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+}
+
+.galleri-billede:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.galleri-billede:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.galleri-billede:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.galleri-billede:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.galleri-billede:nth-child(5) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
 
 /* Ja tak tilbud cards */
 
@@ -362,4 +509,84 @@ nav {
     margin: var(--medGap) auto 0;
     width: 80%;
     text-align: center;
+}
+
+/* Kontakt */
+
+.madudafhuset-kontakt {
+    background-color: var(--Secondary);
+    color: white;
+    padding: 3rem;
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+.madudafhuset-kontakt a {
+    color: white;
+}
+
+.madudafhuset-kontakt-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--medGap);
+}
+
+.madudafhuset-address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: var(--medGap);
+}
+
+.madudafhuset-address p {
+    display: flex;
+    align-items: center;
+    gap: var(--medGap);
+}
+
+.madudafhuset-address i {
+    font-size: 1.2rem;
+}
+
+.madudafhuset-address a {
+    color: white;
+    text-decoration: none;
+}
+
+.madudafhuset-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--medGap);
+}
+
+.madudafhuset-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smallGap);
+    font-family: "Montserrat", sans-serif;
+}
+
+.madudafhuset-form input,
+.madudafhuset-form textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.madudafhuset-besked-felt {
+    grid-column: 1 / -1;
+}
+
+.madudafhuset-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.madudafhuset-form button {
+    grid-column: 1 / -1;
+    width: 100%;
+    border: 1px solid white;
 }
