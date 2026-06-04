@@ -431,6 +431,10 @@ footer {
     .lokation {
         margin-top: 20rem;
     }
+
+    .kort {
+        height: 500px;
+    }
 }
 
 /* mobil footer */
