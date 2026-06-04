@@ -89,8 +89,28 @@ h5 {
     background-color: var(--Secondary);
     color: white;
     transition: 0.5s;
-
 }
+
+/* Køb gavekort knap */
+.giftcardbtn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: solid var(--Secondary) 1px;
+    background-color: white;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    box-shadow: var(--buttonShadow);
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
+.giftcardbtn:hover {
+    background-color: var(--Secondary);
+    color: white;
+    transition: 0.5s;
+}
+
 
 /* Navbar */
 nav {
@@ -181,6 +201,12 @@ nav {
     .mallemukkenlogo {
     width: 150px;
     }
+}
+
+/* Forside */
+.hero-images img {
+    width: 100%;
+    height: 350px;
 }
 
 /* Footer */
