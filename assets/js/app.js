@@ -21,3 +21,13 @@ if (activeLink) {
     const link = document.querySelector(`#myLinks a[href="${activeLink}"]`);
     if (link) link.classList.add('active');
 }
+  const links = document.getElementById("myLinks");
+  links.classList.toggle("open");
+
+
+
+function myFunction() {
+  const x = document.getElementById("myLinks");
+  x.style.display = x.style.display === "block" ? "none" : "block";
+}
+
