@@ -218,7 +218,7 @@ function renderArrangementer(posts) {
                     </a>
 
                     <a href="arrangement.html?id=${post.id}"
-                       class="book-bord1">
+                       class="readmorebtn">
                         Læs mere
                     </a>
 

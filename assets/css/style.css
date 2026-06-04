@@ -286,7 +286,7 @@ nav {
 }
 
 .event-buttons .book-bord,
-.event-buttons .book-bord1 {
+.event-buttons .readmorebtn {
     padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: center;
