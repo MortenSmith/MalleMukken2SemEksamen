@@ -767,3 +767,89 @@ nav {
 }
 
 /* mad ud af huset SLUT */
+
+
+
+/* Selskab hos os START */
+
+/* Selskab fordele */
+
+.selskab-fordele {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+    margin: 6rem 0;
+}
+
+.selskab-fordel {
+    text-align: center;
+}
+
+.selskab-fordel i {
+    font-size: 4rem;
+    color: var(--Secondary);
+
+    margin-bottom: 1rem;
+}
+
+.selskab-fordel h3 {
+    margin-bottom: 1rem;
+}
+
+/* Faciliteter */
+
+/* Faciliteter */
+
+.selskab-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    background-color: white;
+    box-shadow: var(--buttonShadow);
+
+    margin-bottom: 6rem;
+    height: 550px;
+}
+
+.selskab-info-content {
+    padding: 3rem;
+}
+
+.selskab-faciliteter {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.selskab-faciliteter li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.selskab-faciliteter i {
+    color: var(--Secondary);
+    font-size: 1rem;
+}
+
+
+.selskab-info-content h3 {
+    margin-bottom: 1rem;
+}
+
+.selskab-info-content p {
+    margin-bottom: 2rem;
+}
+
+.selskab-info img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* Hold selskab SLUT */
