@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Skolemad & Frokost To Go</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/madudafhuset.js" defer></script>
 </head>
 
 <body>
@@ -36,13 +36,188 @@
     </nav>
 
 
+    <section class="madudafhuset-hero">
 
+        <img src="./assets/img/salatertogo.jpg" alt="Skolemad og frokost to go">
 
+        <article class="madudafhuset-hero-content">
+            <h1>Skolemad & Frokost To Go</h1>
 
-    <!-- <div class="knap">
-		<button class="book-bord">Book bord</button>
-		<button class="book-bord1">Læs mere</button>
-	</div> -->
+            <p>
+                Friske frokostløsninger til skole, arbejde og hverdag.
+            </p>
+
+            <a href="#frokost-menu" class="madudafhuset-scroll-link">
+                Læs mere her
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </article>
+
+    </section>
+
+    <main>
+        <section class="frokost-menu" id="frokost-menu">
+
+            <h2>Frokost menu</h2>
+
+            <div class="frokost-menu-grid">
+
+                <article class="frokost-menu-kategori">
+                    <section>
+                        <h3>Frokost sandwich</h3>
+                        <p class="frokost-pris">49,-</p>
+
+                        <p class="frokost-underoverskrift">Varianter</p>
+
+                        <ul>
+                            <li>Serrano skinke</li>
+                            <li>Kylling</li>
+                            <li>Frikadelle</li>
+                            <li>Tun</li>
+                            <li>Laks</li>
+                            <li>Æg / Rejer</li>
+                            <li>Crispy chicken</li>
+                            <li>Ribbensteg</li>
+                        </ul>
+
+                        <p class="frokost-underoverskrift">Vegetar:</p>
+
+                        <ul>
+                            <li>Falafel</li>
+                            <li>Tomat / Mozzarella</li>
+                        </ul>
+                    </section>
+
+                    <img src="./assets/img/sandwich2.png" alt="Tegning af Sandwich">
+                </article>
+
+                <article class="frokost-menu-kategori">
+                    <section>
+                        <h3>Salater inkl. brød, pesto og dressing</h3>
+                        <p class="frokost-pris">59,-</p>
+
+                        <p class="frokost-underoverskrift">Varianter</p>
+
+                        <ul>
+                            <li>Kyllling</li>
+                            <li>Serrano og mozzarella</li>
+                            <li>Falafel</li>
+                            <li>Varmrøget laks</li>
+                            <li>Æg og rejer</li>
+                            <li>Kebab</li>
+                        </ul>
+                    </section>
+
+                    <img src="./assets/img/salattegning.png" alt="Tegning af Salat">
+                </article>
+
+            </div>
+
+            <div class="frokost-ekstra-grid">
+
+                <article class="frokost-ekstra">
+                    <img src="./assets/img/pomfritter.png" alt="Tegning af Pomfritter">
+                    <h3>Pomfritter</h3>
+                    <p>30,-</p>
+                </article>
+
+                <article class="frokost-ekstra">
+                    <img src="./assets/img/pommesnuggets.png" alt="Tegning af Pomfritter med nuggets">
+                    <h3>Pomfritter med nuggets</h3>
+                    <p>49,-</p>
+                </article>
+
+                <article class="frokost-ekstra">
+                    <img src="./assets/img/sandwich2.png" alt="Tegning af Panini">
+                    <h3>Panini</h3>
+                    <p>35,-</p>
+                </article>
+
+                <article class="frokost-ekstra">
+                    <img src="./assets/img/chilimayo.png" alt="Tegning af Chili mayo">
+                    <h3>Chili mayo</h3>
+                    <p>5,-</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="bestilfrokost">
+
+            <h2>Bestil din frokost</h2>
+
+            <div class="bestilfrokost-grid">
+
+                <article class="event-card bestilfrokost-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="event-content">
+                        <h3>Skolemad</h3>
+
+                        <p class="bestilfrokost-subtitle">
+                            Mandag og Torsdag
+                        </p>
+
+                        <p class="event-text">
+                            5.-9. klasse.
+                        </p>
+
+                        <p class="event-text">
+                            Bestil her og vi levere direkte til skolen kl 11:50 ved kontoret.
+                        </p>
+
+                        <div class="event-buttons">
+                            <a href="#" class="book-bord">Bestil skolemad</a>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="event-card bestilfrokost-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="event-content">
+                        <h3>Frokost To Go</h3>
+
+                        <p class="bestilfrokost-subtitle">
+                            Alle dage
+                        </p>
+
+                        <p class="event-text">
+                            Mangler du en nem og hurtig frokost?
+                        </p>
+
+                        <p class="event-text">
+                            Kontakt os og vi sørger for det.
+                        </p>
+
+                        <div class="event-buttons">
+                            <a href="#" class="book-bord">Bestil frokost</a>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="tilbud-section">
+
+            <h2>Andre aktuelle tilbud</h2>
+
+            <div class="tilbud-grid"></div>
+
+        </section>
+
+    </main>
 
 </body>
 

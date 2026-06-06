@@ -857,7 +857,6 @@ nav {
 /* Mad til festen */
 
 /* Menu */
-/* Mad til festen */
 
 .madtilfesten-menu {
     margin: 6rem 0;
@@ -959,3 +958,179 @@ nav {
 .bestilmad-card .event-buttons {
     justify-content: center;
 }
+
+/* Mad til festen SLUT */
+
+/* TOGO START */
+
+/* Skolemad og Frokost To Go */
+
+.frokost-menu {
+    margin: 6rem 0;
+}
+
+.frokost-menu h2 {
+    margin: 0 auto 4rem;
+}
+
+.frokost-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 5rem;
+}
+
+.frokost-menu-kategori {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: var(--largeGap);
+
+    border-top: 2px solid var(--Blue);
+    padding-top: 1rem;
+}
+
+.frokost-menu-kategori h3 {
+    margin-bottom: var(--smallGap);
+}
+
+.frokost-pris {
+    font-weight: 600;
+    margin-bottom: var(--medGap);
+}
+
+.frokost-underoverskrift {
+    font-weight: 600;
+    margin: var(--medGap) 0 var(--smallGap);
+}
+
+.frokost-menu-kategori ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.frokost-menu-kategori li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.frokost-menu-kategori img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    justify-self: end;
+    align-self: center;
+}
+
+.frokost-ekstra-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--largeGap);
+    text-align: center;
+}
+
+.frokost-ekstra {
+    border-left: 2px dotted var(--Blue);
+    padding-left: var(--largeGap);
+}
+
+.frokost-ekstra:first-child {
+    border-left: none;
+}
+
+.frokost-ekstra img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: var(--smallGap);
+}
+
+.frokost-ekstra h3 {
+    font-size: 1rem;
+}
+
+/* Bestil frokost */
+
+.bestilfrokost {
+    margin: 6rem 0;
+}
+
+.bestilfrokost h2 {
+    margin: 0 auto 5rem;
+}
+
+.bestilfrokost-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bestilfrokost-card {
+    min-height: 420px;
+}
+
+.bestilfrokost-card .event-content {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.bestilfrokost-card .event-buttons {
+    justify-content: center;
+}
+
+.bestilfrokost-subtitle {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: var(--smallGap);
+}
+
+/* Togo media queries */
+
+@media (max-width: 768px) {
+
+    .frokost-menu {
+        margin: 4rem 0;
+    }
+
+    .frokost-menu h2,
+    .bestilfrokost h2 {
+        margin-bottom: 2rem;
+    }
+
+    .frokost-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .frokost-menu-kategori {
+        grid-template-columns: 1fr 90px;
+    }
+
+
+    .frokost-ekstra-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .frokost-ekstra {
+        min-width: 150px;
+
+        padding-left: 0;
+
+    }
+
+    .bestilfrokost-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bestilfrokost-card {
+        min-height: auto;
+    }
+}
+
+/* TOGO SLUT */
