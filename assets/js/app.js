@@ -70,7 +70,7 @@ function changeSlide(n) {
 
 if (window.innerWidth < 768) {
     showSlide(0);
-    setInterval(() => changeSlide(1), 4000);
+    setInterval(() => changeSlide(1), 10000);
 } else {
     slides.forEach(s => s.classList.add("active"));
 }
