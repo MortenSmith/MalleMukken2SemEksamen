@@ -154,6 +154,25 @@ h5 {
 /* Navbar */
 nav {
     background-color: var(--Blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* Navbar shrink effekt */
+nav.scrolled {
+    background-color: rgba(134, 160, 200, 0.85);  /* let transparent */
+    backdrop-filter: blur(8px);                    /* frosted glass effekt */
+}
+
+nav.scrolled .topnav {
+    padding: 4px 20px;  /* mindre padding når scrollet */
+}
+
+nav.scrolled .mallemukkenlogo {
+    width: 100px;       /* mindre logo når scrollet */
+    transition: width 0.3s ease;
 }
 
 .mallemukkenlogo {
@@ -172,9 +191,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .topnav a {
@@ -199,6 +215,7 @@ nav {
     display: none;
     width: 100%;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .topnav #myLinks.open {
