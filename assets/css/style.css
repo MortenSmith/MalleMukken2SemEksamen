@@ -192,7 +192,8 @@ nav {
     }
 }
 
-/* Card */
+/* Arrangement start */
+
 /* Arrangement cards */
 .arrangementer {
     padding: var(--largeGap) 0 6rem;
@@ -297,7 +298,7 @@ nav {
     text-decoration: none;
 }
 
-/* sørger for samme højde */
+
 
 .event-buttons .book-bord {
     border: 1px solid transparent;
@@ -307,7 +308,7 @@ nav {
     border: 1px solid var(--Secondary);
 }
 
-/* Filter knapper til arrangment siden */
+/* Filter knapper til arrangmenter */
 
 .filter-buttons {
     display: flex;
@@ -338,24 +339,26 @@ nav {
     transition: 0.3s ease;
 }
 
-/* Hover */
+
 
 .filter-btn:hover {
     background-color: var(--Blue);
     box-shadow: var(--buttonShadow);
 }
 
-/* Aktiv knap */
+
 
 .filter-btn.active {
     background-color: var(--Blue);
     box-shadow: var(--buttonShadow);
 }
 
-/* Fokus til accessibility */
+
 .filter-btn:focus {
     outline: none;
 }
+
+/* Arrangementer SLUT */
 
 /* Mad ud af huset START */
 
@@ -520,7 +523,7 @@ nav {
 
 .tilbud-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--largeGap);
 }
 
@@ -648,9 +651,7 @@ nav {
     margin: 0;
 }
 
-/* MUAH Media querys */
 
-/* Mobil */
 
 @media (max-width: 768px) {
 
@@ -677,38 +678,23 @@ nav {
         margin-bottom: 1.5rem;
     }
 
-    .madudafhuset-loesning-grid,
-    .tilbud-grid {
-        padding: 1rem 0;
-    }
-
-
-
-
-    /* Løsningskort */
-
     .madudafhuset-loesning-grid {
         display: flex;
         overflow-x: auto;
         gap: 1rem;
-        padding: 4rem 0 1rem;
+        padding: 1rem 0;
     }
 
     .madudafhuset-loesning-card {
         width: 75vw;
         min-width: 75vw;
-
         flex-shrink: 0;
-
     }
-
-    /* Galleri */
 
     .madudafhuset-galleri-grid {
         display: flex;
         overflow-x: auto;
         gap: 1rem;
-
         padding-bottom: 1rem;
     }
 
@@ -718,38 +704,26 @@ nav {
     .galleri-billede:nth-child(3),
     .galleri-billede:nth-child(4),
     .galleri-billede:nth-child(5) {
-
         width: 220px;
         min-width: 220px;
         height: 250px;
-
         grid-column: auto;
         grid-row: auto;
-
         flex-shrink: 0;
-        scroll-snap-align: start;
     }
-
-    /* Tilbud */
 
     .tilbud-grid {
         display: flex;
         overflow-x: auto;
         gap: 1rem;
-
-        scroll-snap-type: x mandatory;
         padding-bottom: 1rem;
     }
 
     .tilbud-card {
         width: 75vw;
         min-width: 75vw;
-
         flex-shrink: 0;
-        scroll-snap-align: start;
     }
-
-    /* Kontakt */
 
     .madudafhuset-kontakt {
         grid-template-columns: 1fr;
@@ -763,7 +737,6 @@ nav {
     .madudafhuset-form button {
         width: 100%;
     }
-
 }
 
 /* mad ud af huset SLUT */
@@ -797,7 +770,49 @@ nav {
     margin-bottom: 1rem;
 }
 
-/* Faciliteter */
+/* Selskabmedia queries */
+@media (max-width: 768px) {
+
+    .selskab-fordele {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 4rem 0;
+    }
+
+    .selskab-fordel i {
+        font-size: 3rem;
+    }
+
+    .selskab-info {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .selskab-info-content {
+        padding: 2rem;
+    }
+
+    .selskab-info-content .book-bord {
+        display: none;
+    }
+
+    .selskab-info img {
+        height: 300px;
+    }
+
+    .madudafhuset-kontakt {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .madudafhuset-form {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
 
 /* Faciliteter */
 
@@ -957,6 +972,32 @@ nav {
 
 .bestilmad-card .event-buttons {
     justify-content: center;
+}
+
+/* Mad til fest Media queries */
+
+@media (max-width: 768px) {
+
+    .madtilfesten-menu {
+        margin: 4rem 0;
+    }
+
+    .madtilfesten-menu h2 {
+        margin-bottom: 2rem;
+    }
+
+    .madtilfesten-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .madtilfesten-menu-kategori {
+        grid-template-columns: 1fr 90px;
+    }
+
+    .bestilmad-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Mad til festen SLUT */
