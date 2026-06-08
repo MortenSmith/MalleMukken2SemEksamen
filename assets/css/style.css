@@ -163,7 +163,7 @@ nav {
 /* Navbar shrink effekt */
 nav.scrolled {
     background-color: rgba(134, 160, 200, 0.85);  /* let transparent */
-    backdrop-filter: blur(8px);                    /* frosted glass effekt */
+    backdrop-filter: blur(8px); /* frosted glass effekt */
 }
 
 nav.scrolled .topnav {
