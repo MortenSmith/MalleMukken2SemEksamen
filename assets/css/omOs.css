@@ -1,150 +1,174 @@
 :root {
-      --Primary: #F5EFEC;
-      --Secondary: #A90C43;
-      --Blue: #86A0C8;
-      --smallGap: 0.5rem;
-      --medGap: 1rem;
-      --largeGap: 2rem;
-      --headerShadow: 4px 4px 4px #000000cc;
-      --buttonShadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: "Montserrat", sans-serif;
-      color: #1a1a1a;
-      background: #fff;
-    }
-    p {
-      font-family: "Montserrat", sans-serif;
-      font-size: 16px;
-    }
-    h1, h2, h3, h4, h5 {
-      font-family: "Playfair Display", serif;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  --Primary: #F5EFEC;
+  --Secondary: #A90C43;
+  --Blue: #86A0C8;
+  --smallGap: 0.5rem;
+  --medGap: 1rem;
+  --largeGap: 2rem;
+  --headerShadow: 4px 4px 4px #000000cc;
+  --buttonShadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
 
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 425px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-    .hero img.hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      /* object-fit: cover; */
-      object-position: center;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.35);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      color: #fff;
-      text-shadow: var(--headerShadow);
-    }
-    .hero-content h1 {
-      font-size: 44px;
-      font-weight: 700;
-    }
-    .hero-content p {
-      font-size: 15px;
-      margin-top: 8px;
-      opacity: 0.9;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
 
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
 
-    /* Hvem vi er  */
-    .about-section {
-      max-width: 1100px;
-      margin: 72px auto;
-      padding: 0 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--largeGap);
-      align-items: start;
-    }
-    .about-text h2 {
-      font-size: 34px;
-      margin-bottom: 28px;
-    }
-    .about-text p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: black;
-      margin-bottom: 6px;
-    }
-    .about-text span.red {
-      color: var(--Secondary);
-      font-weight: 600;
-    }
-    .about-text hr.divider {
-      border: none;
-      border-top: 2px solid var(--Secondary);
-      width: 40px;
-      margin: 18px 0 20px;
-    }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero img.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-position: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-shadow: var(--headerShadow);
+}
+
+.hero-content h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 15px;
+  margin-top: 8px;
+  opacity: 0.9;
+}
 
 
-    /* Image grid */
-    .about-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--smallGap);
-    }
-    .about-images img {
-      width: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .about-images img.img-full {
-      grid-column: 1 / -1;
-      height: 220px;
-    }
-    .about-images img.img-half {
-      height: 160px;
-    }
+
+/* Hvem vi er  */
+.about-section {
+  max-width: 1100px;
+  margin: 72px auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--largeGap);
+  align-items: start;
+}
+
+.about-text h2 {
+  font-size: 34px;
+  margin-bottom: 28px;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.about-text span.red {
+  color: var(--Secondary);
+  font-weight: 600;
+}
+
+.about-text hr.divider {
+  border: none;
+  border-top: 2px solid var(--Secondary);
+  width: 40px;
+  margin: 18px 0 20px;
+}
 
 
-   /* Vores historie */
+/* Image grid */
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--smallGap);
+}
+
+.about-images img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-images img.img-full {
+  grid-column: 1 / -1;
+  height: 220px;
+}
+
+.about-images img.img-half {
+  height: 160px;
+}
+
+
+/* Vores historie */
 .history-section {
   padding: 80px 40px;
   text-align: center;
   background: var(--Primary);
 }
+
 .history-section h2 {
   font-size: 32px;
   margin-bottom: 52px;
 }
+
 .timeline-wrapper {
   margin: 0 auto;
 }
 
-/* ── Desktop: horisontal ── */
+/* Desktop */
 .timeline-dots {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   position: relative;
 }
+
 .timeline-dots::before {
   content: '';
   position: absolute;
@@ -155,12 +179,14 @@
   background: var(--Secondary);
   z-index: 0;
 }
+
 .timeline-dot-item {
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 1;
 }
+
 .dot {
   width: 16px;
   height: 16px;
@@ -168,6 +194,7 @@
   border-radius: 50%;
   flex-shrink: 0;
 }
+
 .timeline-items {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -175,6 +202,7 @@
   margin-top: 20px;
   text-align: left;
 }
+
 .timeline-item .year {
   font-size: 14px;
   font-weight: 700;
@@ -182,287 +210,356 @@
   margin-bottom: 4px;
   font-family: "Montserrat", sans-serif;
 }
+
 .timeline-item h3 {
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 6px;
   font-family: "Playfair Display", serif;
 }
+
 .timeline-item p {
   font-size: 11.5px;
   line-height: 1.65;
-  color:black;
+  color: black;
   height: 57px;
 }
 
 
-    /* shop / ta et minde med hjem */
-    .souvenir-section {
-      background: var(--Secondary);
-      color: #fff;
-      padding: 64px 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* Ingen variabel bred nok, så brugte et andet gap her */
-      gap: 80px;
-    }
-    .souvenir-text {
-      max-width: 420px;
-    }
-    .souvenir-text h2 {
-      font-size: 28px;
-      margin-bottom: 18px;
-    }
-    .souvenir-text p {
-      font-size: 14px;
-      line-height: 1.8;
-      opacity: 0.92;
-      margin-bottom: 28px;
-    }
-    .btn-outline-white {
-      display: inline-block;
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 10px 26px;
-      border-radius: 4px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.2s, color 0.2s;
-      box-shadow: var(--buttonShadow);
-    }
-    .btn-outline-white:hover {
-      background: #fff;
-      color: var(--Secondary);
-    }
-    .souvenir-image img {
-      width: 380px;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-    /* footer, men den ændres */
-    footer {
-      background: var(--Blue);
-      padding: 60px 60px 36px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 13px;
-      color: #1a1a1a;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1.7fr 1fr 1.2fr;
-      gap: var(--largeGap);
-      max-width: 1100px;
-      margin: 0 auto 36px;
-    }
-    .footer-brand-name {
-      font-family: "Playfair Display", serif;
-      font-style: italic;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-    .footer-brand p {
-      font-size: 12px;
-      color: black;
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-    .footer-map img {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .footer-social {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 12px;
-      color: #222;
-      margin-top: 8px;
-    }
-    .footer-social a {
-      font-size: 20px;
-      color: #1a1a1a;
-      transition: color 0.2s;
-    }
-    .footer-social a:hover {
-      color: var(--Secondary);
-    }
-    footer h4 {
-      font-family: "Playfair Display", serif;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .footer-hours p {
-      font-size: 12px;
-      line-height: 1.75;
-      color: #111;
-    }
-    .footer-hours p strong {
-      font-weight: 700;
-      display: block;
-      margin-top: 12px;
-    }
-    .footer-hours p strong:first-child {
-      margin-top: 0;
-    }
-    .footer-hours .note {
-      font-size: 11px;
-      color: #333;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-    .footer-links ul {
-      list-style: none;
-      font-size: 13px;
-    }
-    .footer-links ul li {
-      margin-bottom: 8px;
-    }
-    .footer-links ul li a {
-      color: #111;
-      transition: color 0.2s;
-    }
-    .footer-links ul li a:hover {
-      color: var(--Secondary);
-    }
-    .footer-contact p {
-      font-size: 12.5px;
-      line-height: 1.8;
-      color: #111;
-    }
-    .kontrol-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 6px 12px;
-      margin-top: 12px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #1a1a1a;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(0,0,0,0.15);
-      padding-top: 16px;
-      font-size: 11px;
-      color: #333;
-      text-align: center;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 960px) {
-      nav { padding: 14px 24px; }
-      .nav-links { gap: 16px; font-size: 13px; }
-      .about-section {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin: 48px auto;
-      }
-    
-      .souvenir-section {
-        flex-direction: column;
-        gap: 40px;
-        padding: 48px 32px;
-      }
-      .souvenir-image img {
-        width: 100%;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-      }
-    }
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .hero-content h1 { font-size: 30px; }
-      .footer-grid { grid-template-columns: 1fr; }
-      footer { padding: 40px 24px 28px; }
-    }
-
-    
-    /* Mobil vertikal */
-@media (max-width: 768px) {
-  .history-section {
-    padding: 60px 24px;
-  }
-  /* Skjul de separate dot- og photo-rækker på mobil */
-  .timeline-dots,
-  .timeline-photos, .timeline-dot-item {
-    display: none;
-  }
-  /* Lav tidslinjen til en vertikal liste */
-  .timeline-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 0;
-    position: relative;
-  }
-  /* Den lodrette linje  */
-  .timeline-items::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 20px;
-    width: 2px;
-    background: var(--Secondary);
-    z-index: 0;
-  }
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: 16px;
-    padding: 0 0 36px 0;
-    position: relative;
-  }
-  /* Dot til venstre for hvert punkt */
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 13px;
-    top: 4px;
-    width: 16px;
-    height: 16px;
-    background: var(--Secondary);
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .timeline-item .year {
-    font-size: 13px;
-    padding-top: 2px;
-    text-align: right;
-    padding-right: 8px;
-  }
-  .timeline-item h3 {
-    font-size: 14px;
-    margin-bottom: 6px;
-  }
-  .timeline-item p {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-  /* Foto under teksten for hvert punkt */
-  .timeline-item img {
-    grid-column: 2 / 3;
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-top: 10px;
-  }
-
-
-  .year{
-    padding-left: 30px;
-  }
+/* shop / ta' et minde med hjem */
+.souvenir-section {
+  background: var(--Secondary);
+  color: #fff;
+  padding: 64px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ingen variabel bred nok, så brugte et andet gap her */
+  gap: 80px;
 }
+
+.souvenir-text {
+  max-width: 420px;
+}
+
+.souvenir-text h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.souvenir-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.92;
+  margin-bottom: 28px;
+}
+
+.btn-outline-white {
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: var(--buttonShadow);
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--Secondary);
+}
+
+.souvenir-image img {
+  width: 380px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* footer, men den ændres */
+footer {
+  background: var(--Blue);
+  padding: 60px 60px 36px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.7fr 1fr 1.2fr;
+  gap: var(--largeGap);
+  max-width: 1100px;
+  margin: 0 auto 36px;
+}
+
+.footer-brand-name {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 12px;
+  color: black;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.footer-map img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  color: #222;
+  margin-top: 8px;
+}
+
+.footer-social a {
+  font-size: 20px;
+  color: #1a1a1a;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--Secondary);
+}
+
+footer h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer-hours p {
+  font-size: 12px;
+  line-height: 1.75;
+  color: #111;
+}
+
+.footer-hours p strong {
+  font-weight: 700;
+  display: block;
+  margin-top: 12px;
+}
+
+.footer-hours p strong:first-child {
+  margin-top: 0;
+}
+
+.footer-hours .note {
+  font-size: 11px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  font-size: 13px;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #111;
+  transition: color 0.2s;
+}
+
+.footer-links ul li a:hover {
+  color: var(--Secondary);
+}
+
+.footer-contact p {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: #111;
+}
+
+.kontrol-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 16px;
+  font-size: 11px;
+  color: #333;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* media queries */
+@media (max-width: 1440px) {
+
+  .timeline-item img {
+    width: 200px;
+
+  }
+
+
+  .timeline-item p {
+    height: 98px;
+  }
+
+
+
+  @media (max-width: 1080px) {
+    nav {
+      padding: 14px 24px;
+    }
+
+
+    .about-section {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin: 48px auto;
+    }
+
+    .souvenir-section {
+      flex-direction: column;
+      gap: 40px;
+      padding: 48px 32px;
+    }
+
+    .souvenir-image img {
+      width: 100%;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 465px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hero-content h1 {
+      font-size: 30px;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      padding: 40px 24px 28px;
+    }
+  }
+
+
+  /* Mobil vertikal tidslinje */
+  @media (max-width: 465px) {
+    .history-section {
+      padding: 60px 24px;
+    }
+
+    /* Skjul de separate dot- og photo-rækker på mobil */
+    .timeline-dots,
+    .timeline-photos,
+    .timeline-dot-item {
+      display: none;
+    }
+
+    /* Lav tidslinjen til en vertikal liste */
+    .timeline-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 0;
+      position: relative;
+    }
+
+    /* Den lodrette linje  */
+    .timeline-items::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 2px;
+      background: var(--Secondary);
+      z-index: 0;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      padding: 0 0 36px 0;
+      position: relative;
+    }
+
+    /* Dot til venstre for hvert punkt */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      background: var(--Secondary);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item .year {
+      font-size: 13px;
+      padding-top: 2px;
+      text-align: right;
+      padding-right: 8px;
+    }
+
+    .timeline-item h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item p {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* Foto under teksten for hvert punkt */
+    .timeline-item img {
+      grid-column: 2 / 3;
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+
+    .year {
+      padding-left: 30px;
+    }
+  }
