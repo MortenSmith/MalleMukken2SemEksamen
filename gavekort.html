@@ -36,188 +36,63 @@
     </div>
   </nav>
 
-  <header>
-    <div class="hero-images">
-      <picture>
-        <source type="image/webp" srcset="
-        ./assets/img/hero-billede-forsiden_800.webp 800w,
-        ./assets/img/hero-forside_1920.webp 1920w">
-        <img src="./assets/img/hero-billede-forsiden_800.webp" sizes="100vw" alt="Billede indefra Mallemukken"
-          loading="eager">
-      </picture>
-    </div>
-
-    <div class="hero-btn">
-      <img class="hero-logo" src="./assets/img/Mallemukken_logo_hvid.svg" alt="Mallemukkens logo">
-
-      <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
-
-      <a class="giftcardbtn" href="./gavekort.html">Køb gavekort</a>
-    </div>
-
-    <div class="showmore">
-      <p>Udforsk mere</p>
-      <i class="fa-solid fa-arrow-down"></i>
-    </div>
-  </header>
-
   <main>
-    <section class="hvadvitilbyder">
-      <div class="header-hvadvitilbyder">
-        <h2>Hvad vi tilbyder</h2>
-        <div class="line"></div>
-      </div>
-
-      <div class="focused-entry-slideshow-container">
-        <div class="myslides fade">
-          <a href="./menu.html" class="tekst-indhold">
-            <h3>Vores menukort</h3>
-            <p>Se vores spændende menukort</p>
-            <picture>
-              <source type="image/webp" srcset="
-          ./assets/img/vores-menukort_640.webp 640w,
-          ./assets/img/menukort-billede_800.webp 800w">
-
-              <img src="./assets/img/menukort-billede_800.webp" sizes="100vw" alt="Mallemukkens menukort"
-                loading="lazy">
-            </picture>
-          </a>
+    <section class="gavekort-container">
+        <div class="gavekort-beskrivelse">
+            <i class="fa-solid fa-gift"></i>
+            <h1>Køb et gavekort</h1>
+            <div class="gavekort-indhold"><p>Giv et gavekort - de vælger selv</p></div>
         </div>
 
-        <div class="myslides fade">
-          <a href="./arrangementer.html" class="tekst-indhold">
-            <h3>Hold dit næste selskab hos os</h3>
-            <p>Vi tilbyder hyggelige rammer til både små og store arrangementer....</p>
-            <picture>
-              <source type="image/webp" srcset="
-              ./assets/img/selskab_640.webp 640w,
-              ./assets/img/selskab_800.webp 800w">
+        <div class="penge-container">
+            <div class="howmuch">
+                <button class="howmuch-knap">100 kr</button>
+            </div>
 
-              <img src="./assets/img/selskab_800.webp" sizes="100vw" alt="Hold selskaber hos os" loading="lazy">
-            </picture>
-          </a>
+            <div class="howmuch">
+                <button class="howmuch-knap">250 kr</button>
+            </div>
+
+            <div class="howmuch">
+                <button class="howmuch-knap">500 kr</button>
+            </div>
+
+            <div class="howmuch">
+                <button class="howmuch-knap">1000 kr</button>
+            </div>
         </div>
 
-        <div class="myslides fade">
-          <a href="./madudafhuset.html" class="tekst-indhold">
-            <h3>Mad ud af huset</h3>
-            <p>Vi leverer mad ud af....</p>
-            <picture>
-              <source type="image/webp" srcset="
-              ./assets/img/madudafhuset_640.webp 640w,
-              ./assets/img/Madudafhuset_800.webp 800w">
+        <div class="gavekort-line"></div>
 
-              <img src="./assets/img/Madudafhuset_800.webp" sizes="100vw"
-                alt="Se hvad Mallemukken tilbyder af mad ud af huset" loading="lazy">
-            </picture>
-          </a>
+        <div class="gavekort-kontaktformular">
+            <form>
+                <label for="fname">Dit fulde navn</label>
+                <input type="text" id="fname" placeholder="Fornavn og efternavn" required autocomplete="name">
+
+                <label for="email">Din email</label>
+                <input type="email" id="email" placeholder="din@email.dk" required autocomplete="email">
+
+                <label for="modtagerensNavn">Modtagerens navn</label>
+                <input type="text" id="modtagerensNavn" placeholder="Hvem er det til?">
+
+                <label for="modtagerensEmail">Modtagerens E-mail</label>
+                <input type="email" id="modtagerensEmail" placeholder="modtager@gmail.com">
+            </form>
         </div>
-        <!-- Sliderknap -->
-        <button class="slide-next" onclick="changeSlide(1)">Næste<i class="fa-solid fa-arrow-right"></i></button>
-        <div class="slide-progress">
-          <div class="slide-progress-bar" id="progressBar"></div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Nyheder -->
-    <section class="nyheder-container ">
-      <div class="header-nyheder">
-        <h2>Nyheder</h2>
-        <div class="line"></div>
-      </div>
-      <div class="nyheder-grid"></div>
-    </section>
+          <div class="gavekort-line"></div>
 
-
-    <!-- Oplevelse -->
-    <section class="oplevelse-container">
-      <div class="header-oplevelse">
-        <h2>Oplevelse</h2>
-        <div class="line"></div>
-      </div>
-
-      <article class="oplevelse-container">
-        <div class="oplevelse-card">
-          <div class="oplevelseindhold">
-            <h3>Rating</h3>
-            <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
-            <p>"En uforglemmelig aften. Maden var kunstnerisk og servicen helt i top. Den bedste stjerneskud jeg har
-              smagt."</p>
-            <span>
-              <p>- Michael Jensen</p>
-            </span>
+          <div class="betalingialt">
+            <div class="betalingsindhold">
+                <h6>Total at betale</h6>
+                <p>250 kr</p>
+            </div>
           </div>
-        </div>
 
-        <div class="oplevelse-card">
-          <div class="oplevelseindhold">
-            <h3>Rating</h3>
-            <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
-            <p>"Elegance og ro. Mallenmukken formår at skabe en atmosfære, hvor man føler sig helt speciel fra man
-              træder ind."
-            </p>
-            <span>
-              <p>- Sille Madsen</p>
-            </span>
-          </div>
-        </div>
-
-        <div class="oplevelse-card">
-          <div class="oplevelseindhold">
-            <h3>Rating</h3>
-            <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
-            <p>"Menuen er en sand opdagelsesrejse. Hver ret overrasker med nye smagsnuancer fra det dybe hav."</p>
-            <span>
-              <p>- Anders Holm</p>
-            </span>
-          </div>
-        </div>
-
-        <div class="oplevelse-card">
-          <div class="oplevelseindhold">
-            <h3>Rating</h3>
-            <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
-            <p>“Super hyggeligt sted med fantastisk atmosfære. Venlig og sød betjening og dejlig mad.”</p>
-            <span>
-              <p>- Martin Jensen</p>
-            </span>
-          </div>
-        </div>
-
-        <div class="oplevelse-card">
-          <div class="oplevelseindhold">
-            <h3>Rating</h3>
-            <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
-            <p>“Fantastisk oplevelse, fantastisk fiske buffet venlig smilende personale, helt igennem en fantastisk
-              oplevelse vi kommer helt sikkert igen en anden gang”</p>
-            <span>
-              <p>- Harald P</p>
-            </span>
-          </div>
-        </div>
-
-      </article>
-      <div class="dots-oplevelse-container">
-        <span class="dot" onclick="currentslide(1)"></span>
-        <span class="dot" onclick="currentslide(2)"></span>
-        <span class="dot" onclick="currentslide(3)"></span>
-        <span class="dot" onclick="currentslide(4)"></span>
-        <span class="dot" onclick="currentslide(5)"></span>
-      </div>
-    </section>
-
-    <!-- Aktuelle tilbud -->
-    <section class="aktuelletilbud-container">
-      <div class="header-akutelletilbud">
-        <h2>Andre aktuelle tilbud</h2>
-        <div class="line"></div>
-      </div>
-      <div class="aktuelletilbud-grid"></div>
+          <button class="betalingNu"><i class="fa-solid fa-credit-card"></i>Gå til betaling</button>
     </section>
   </main>
-  <!-- Til top knap -->
-  <button onclick="topFunction()" id="mytopbtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
 
   <footer>
     <div class="footer-grid">
@@ -361,6 +236,6 @@
 
 
   </footer>
-</body>
 
+</body>
 </html>

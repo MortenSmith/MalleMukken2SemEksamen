@@ -428,7 +428,7 @@ header::after {
 /* Pil styling */
 .slide-next {
     position: absolute;
-    right: 1rem;
+    right: 4rem;
     top: 90%;
     transform: translateY(-50%);
     background: none;
@@ -448,6 +448,7 @@ header::after {
 .slide-next i {
     animation: goright 3s infinite;
     font-size: 1.5rem;
+    margin-left: 0.5rem;
 }
 
 @keyframes goright {
@@ -2122,9 +2123,137 @@ header::after {
 }
 
 /* Loading animation SLUT */
-    /* outline: none; 
-} */
 
+/* Gavekort */
+.gavekort-container {
+    border: solid 2px var(--Secondary);
+    padding: 1.5rem;
+    margin-top: 5rem;
+    border-radius: 10px;
+    background-color: var(--Secondary);
+    margin-bottom: 1.5rem;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gavekort-beskrivelse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gavekort-beskrivelse i {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.gavekort-beskrivelse h1 {
+    color: white;
+}
+
+.gavekort-indhold p {
+    color: white;
+}
+
+.penge-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.howmuch-knap {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--buttonShadow);
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+.howmuch-knap:hover {
+    background-color: var(--Secondary);
+    color: white;
+    transition: 0.5s;
+}
+
+.gavekort-line {
+    border-bottom: 2px solid var(--Blue);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.gavekort-kontaktformular {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+  height: 48px;
+  padding: 0 16px;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.betalingsindhold {
+    padding: 20px 25px;
+    background-color: var(--Primary);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.betalingNu {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    box-shadow: var(--buttonShadow);
+}
+
+.betalingNu:hover {
+    background-color: var(--Secondary);
+    color: white;
+    transition: 0.5s;
+}
+
+@media (min-width: 1080px) {
+    input {
+        height: 55px;
+    }
+
+    .gavekort-container {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .betalingNu {
+        padding: 20px;
+    }
+
+    .betalingsindhold {
+        padding: 40px 30px;
+    }
+}
 /* Footer */
 footer {
     background-color: var(--Blue);
