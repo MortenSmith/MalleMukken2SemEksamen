@@ -1060,6 +1060,15 @@ header::after {
 
 .event-content {
     padding: var(--largeGap);
+    display: flex;
+    flex-direction: column;
+    /* Optager den resterende højde med flex 1 */
+    flex: 1; 
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
 }
 
 .event-category {
@@ -1096,6 +1105,7 @@ header::after {
 .event-buttons {
     display: flex;
     gap: 1rem;
+    margin-top: auto;
 }
 
 .event-buttons .book-bord,
