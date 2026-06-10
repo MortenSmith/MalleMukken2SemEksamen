@@ -929,9 +929,10 @@ header::after {
 .arrangement-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 6rem;
+    gap: 4rem;
     max-width: 1400px;
     margin: 0 auto;
+    
 }
 
 .event-card {
