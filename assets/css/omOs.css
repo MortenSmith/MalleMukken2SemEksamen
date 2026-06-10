@@ -276,7 +276,6 @@ a {
 
   .timeline-item img {
     width: 200px;
-
   }
 
   .history-section {
@@ -417,6 +416,11 @@ a {
       margin-top: 10px;
     }
 
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
     .year {
       padding-left: 30px;
