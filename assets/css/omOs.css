@@ -33,7 +33,7 @@
     /* HERO */
     .hero {
       position: relative;
-      height: 425px;
+      height: 80vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -242,121 +242,6 @@
       object-fit: cover;
       border-radius: 6px;
     }
-    /* footer, men den ændres */
-    footer {
-      background: var(--Blue);
-      padding: 60px 60px 36px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 13px;
-      color: #1a1a1a;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1.7fr 1fr 1.2fr;
-      gap: var(--largeGap);
-      max-width: 1100px;
-      margin: 0 auto 36px;
-    }
-    .footer-brand-name {
-      font-family: "Playfair Display", serif;
-      font-style: italic;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-    .footer-brand p {
-      font-size: 12px;
-      color: black;
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-    .footer-map img {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .footer-social {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 12px;
-      color: #222;
-      margin-top: 8px;
-    }
-    .footer-social a {
-      font-size: 20px;
-      color: #1a1a1a;
-      transition: color 0.2s;
-    }
-    .footer-social a:hover {
-      color: var(--Secondary);
-    }
-    footer h4 {
-      font-family: "Playfair Display", serif;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .footer-hours p {
-      font-size: 12px;
-      line-height: 1.75;
-      color: #111;
-    }
-    .footer-hours p strong {
-      font-weight: 700;
-      display: block;
-      margin-top: 12px;
-    }
-    .footer-hours p strong:first-child {
-      margin-top: 0;
-    }
-    .footer-hours .note {
-      font-size: 11px;
-      color: #333;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-    .footer-links ul {
-      list-style: none;
-      font-size: 13px;
-    }
-    .footer-links ul li {
-      margin-bottom: 8px;
-    }
-    .footer-links ul li a {
-      color: #111;
-      transition: color 0.2s;
-    }
-    .footer-links ul li a:hover {
-      color: var(--Secondary);
-    }
-    .footer-contact p {
-      font-size: 12.5px;
-      line-height: 1.8;
-      color: #111;
-    }
-    .kontrol-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 6px 12px;
-      margin-top: 12px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #1a1a1a;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(0,0,0,0.15);
-      padding-top: 16px;
-      font-size: 11px;
-      color: #333;
-      text-align: center;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {

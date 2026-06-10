@@ -7,6 +7,16 @@ function myFunction() { // definerer en funktion med ingen parametre. den kaldes
     }
 }
 
+// Navbar shrink scroll 
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
 // Active class underline 
 document.querySelectorAll('#myLinks a').forEach(link => { // fanger alle #myLinks a og looper dem igennem.
     link.addEventListener('click', function() { // bruger addEventListener på link og lytter efter et klik. Hver gang der klikkes på et link, så kører koden i funktionen
@@ -14,6 +24,11 @@ document.querySelectorAll('#myLinks a').forEach(link => { // fanger alle #myLink
         this.classList.add('active'); // Tilføjer klassen "active" 
         sessionStorage.setItem('activeLink', this.getAttribute('href')); // Gemmer det aktive links href (fx "#arrangementer") i sessionStorage under nøglen 'activeLink'. sessionStorage husker data så længe browserfanen er åben. 
     });
+});
+// Fjerner active links, når logoet klikkes
+document.querySelector('.mallemukkenlogo').closest('a').addEventListener('click', function() {
+    document.querySelectorAll('#myLinks a').forEach(l => l.classList.remove('active'));
+    sessionStorage.removeItem('activeLink');
 });
 
 // Gendan active class når siden loader
@@ -136,13 +151,3 @@ function topFunction() {
     document.body.scrollTop = 0; // til Safari
     document.documentElement.scrollTop = 0; // til Chrome, firefox og Opera
 }
-
-// Navbar shrink scroll 
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});

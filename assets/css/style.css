@@ -12,14 +12,6 @@ body {
     background-color: var(--Primary);
 }
 
-body {
-    background-color: var(--Primary);
-}
-
-body {
-    background-color: var(--Primary);
-}
-
 main {
 
     margin-left: 30px;
@@ -55,10 +47,11 @@ h5 {
     font-family: "Playfair Display", serif;
 }
 
-h2 {
+h2, .line {
     border-bottom: 2px solid var(--Blue);
     padding-bottom: 0.5rem;
     width: fit-content;
+    margin-bottom: 1rem;
 }
 
 /* Book bord knap */
@@ -151,6 +144,7 @@ h2 {
     align-items: center;
     border-radius: 5px;
     margin: 0;
+    text-decoration: none;
 }
 
 .hero-btn .book-bord {
@@ -168,7 +162,6 @@ nav {
 
 /* Navbar shrink effekt */
 nav.scrolled {
-    background-color: rgba(134, 160, 200, 0.85);  /* let transparent */
     backdrop-filter: blur(8px); /* frosted glass effekt */
 }
 
@@ -188,6 +181,10 @@ nav.scrolled .mallemukkenlogo {
 
 .icon i {
     font-size: 30px;
+}
+
+.topnav #myLinks a:hover {
+    border-bottom: 2px solid var(--Secondary);
 }
 
 .topnav {
@@ -262,13 +259,14 @@ nav.scrolled .mallemukkenlogo {
 
     .mallemukkenlogo {
         width: 80%;
+        width: 150px;
     }
 }
 
 /* Arrangement start */
-    width: 150px;
+    /* width: 150px;
     }
-}
+} */
 
 /* Forside */
 header {
@@ -321,7 +319,7 @@ header::after {
 }
 
 .showmore {
-    bottom: 2rem;
+    bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,14 +350,6 @@ header::after {
     .book-bord, .giftcardbtn {
         padding: 0.5rem 2.4rem;
     }
-}
-
-/* Underline på overskrifter */
-.line {
-    height: 3px;
-    margin: 5px 0;
-    background-color: var(--Blue);
-    margin-bottom: 2rem;
 }
 
 .header-hvadvitilbyder, 
@@ -499,7 +489,7 @@ header::after {
     margin-bottom: 2rem;
 }
 
-.nyheder-grid {
+.nyheder-grid, .aktuelletilbud-grid {
     display: flex;
     flex-direction: column;
     gap: 6rem;
@@ -518,7 +508,12 @@ header::after {
     padding: 2rem;
     box-shadow: var(--buttonShadow);
     border-radius: 12px;
-    animation: fadeIn 0.5s ease
+    animation: fadeIn 0.5s ease;
+    transition: transform 0.4s ease-out;
+}
+
+.oplevelse-card:hover {
+    transform: translateY(-5px);
 }
 
 .oplevelse-card.active {
@@ -610,10 +605,11 @@ header::after {
 }
 
 .menuHero img {
-    width: 100%;
-    height: 700px;
     object-fit: cover;
     object-position: center 70%;
+
+    width: 100%;
+    height: 80vh;
 }
 
 .menuHeroContent {
@@ -626,6 +622,7 @@ header::after {
     gap: var(--medGap);
     text-align: center;
     color: white;
+    top: -50%
 }
 
 .menuHeroContent h1 {
@@ -653,18 +650,6 @@ header::after {
     margin-top: var(--largeGap);
     font-family: "Montserrat", sans-serif;
     animation: hop 2s infinite ease-in-out;
-}
-
-@keyframes hop {
-
-    0%,
-    100% {
-        transform: translateX(0)
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
 }
 
 .menuScroll-link i {
@@ -696,9 +681,6 @@ header::after {
 .menu-gruppe {
     font-size: 20px;
     font-weight: 200;
-    text-decoration: underline var(--Blue) 2px solid;
-    text-underline-position: under;
-    padding-bottom: var(--largeGap);
 }
 
 .menu-card {
@@ -713,8 +695,7 @@ header::after {
 .menu-content {
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat",
-        sans-serif;
+    font-family: "Montserrat", sans-serif;
 
 }
 
@@ -742,6 +723,12 @@ header::after {
     margin-bottom: 6rem;
 }
 
+@media (max-width: 768px) {
+    .menuHeroContent h1 {
+    font-size: 2rem;
+    text-shadow: var(--headerShadow);
+}
+}
 
 .allergener,
 .kitchentime {
@@ -766,6 +753,8 @@ header::after {
 
     border-radius: 50%;
     background: var(--Secondary);
+}
+
 .oplevelseindhold {
     display: flex;
     flex-direction: column;
@@ -793,7 +782,11 @@ header::after {
 }
 
 /* Aktuelle tilbud */
-
+.aktuelletilbud-grid {
+    margin-bottom: 3rem;
+    margin-left: 30px;
+    margin-right: 30px;
+}
 
 /* Til top knap */
 #mytopbtn {
@@ -849,6 +842,9 @@ header::after {
         justify-content: center;
     }
 
+    .showmore {
+        margin-bottom: 1rem;
+    }
     /* Focused entry points*/
     .mysildes {
         display: block !important; 
@@ -880,7 +876,7 @@ header::after {
     }
 
     /* Nyheder */
-    .nyheder-grid {
+    .nyheder-grid, .aktuelletilbud-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5rem;
@@ -908,280 +904,10 @@ header::after {
         margin-right: auto;
     }
 
-    .nyheder-grid {
+    .nyheder-grid, .aktuelletilbud-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3.5rem;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: var(--Blue);
-    padding-bottom: 2rem;
-}
-/* Kontakt */
-.kontakt-container, 
-.openinghours-container, 
-.FAQ-container, 
-.genveje-container {
-    margin-top: 3rem;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.kontakt-container .logo-footer {
-    width: 150px;
-    height: auto;
-}
-
-.medie-container i {
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-}
-
-.medie-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
-}
-
-.headerlokation {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-}
-
-.headerlokation i {
-    font-size: 1.5rem;
-}
-
-.kort {
-    width: 100%;
-    height: 400px;
-}
-
-/* Kontaktoplysninger */
-.kontaktoplysning {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.kontaktoplysning a {
-    text-decoration: none;
-    color: black;
-    border-bottom: solid 0.5px black;
-}
-
-.kontrol-bookbord-knap img {
-    width: 150px;
-    height: auto;
-}
-
-.kontrol-bookbord-knap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
-}
-
-.header-kontakt i {
-    font-size: 1.5rem;
-}
-
-
-/* Åbningstider */
-.header-openinghours, 
-.header-kontakt, 
-.header-genveje {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.header-openinghours i, 
-.header-faq i, 
-.header-genveje i {
-    font-size: 1.5rem;
-}
-
-.openinghours span {
-    font-weight: 600;
-}
-
-.openinghours {
-    margin-top: 1.5rem;
-}
-
-.openinghours, 
-.ekstra-oplysninger  {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* FAQ Accordions */
-.header-faq {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.accordion {
-    background-color: var(--Primary);
-    color: black;
-    cursor: pointer;
-    padding: 14px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-
-    font-size: 1rem;
-}
-
-.active1, .accordion:hover {
-    background-color: #ccc;
-}
-
-.panel {
-    padding: 10px 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-}
-
-.accordion:after {
-    content: '\02795';
-    font-size: 13px;
-    color: black;
-    float: right;
-    margin-left: 5px;
-}
-
-.active1:after {
-    content: "\2796";
-}
-
-.accordions-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Genveje */
-.header-genveje {
-    margin-bottom: 1.5rem;
-}
-
-.genveje-link a {
-    text-decoration: none;
-    color: black;
-}
-
-.genveje-link {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* Desktop footer */
-@media (min-width: 768px) {
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 2rem;
-        padding: 2rem 30px;
-    }
-    .kontakt-container,
-    .openinghours-container,
-    .FAQ-container,
-    .genveje-container
-    .lokation {
-        margin: 0;
-    }
-}
-/* Desktop footer 1080px */
-@media (min-width: 1080px) {
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 2rem;
-        padding: 2rem 30px;
-        align-items: start;
-    }
-
-    .kontakt-container {
-        grid-column: 1;
-        grid-row: 1;
-        margin: 0;
-    }
-
-    .openinghours-container {
-        grid-column: 2;
-        grid-row: 1;
-        margin: 0;
-    }
-
-    .FAQ-container {
-        grid-column: 3;
-        grid-row: 1;
-        margin: 0;
-    }
-
-    .genveje-container {
-        grid-column: 4;
-        grid-row: 1;
-        margin: 0;
-    }
-
-    .lokation {
-        grid-column: 3 / 5;
-        grid-row: 1;
-        margin: 0;
-        margin-top: 20rem;
-    }
-
-    .kort {
-        width: 100%;
-        height: 350px;
-    }
-
-    .kontrol-bookbord-knap {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-    }
-}
-
-/* Desktop 1440px */
-@media (min-width: 1440px) {
-    .lokation {
-        margin-top: 20rem;
-    }
-
-    .kort {
-        height: 500px;
-    }
-}
-
-/* mobil footer */
-@media (max-width: 465px) {
-    .headerlokation {
-        margin-left: 30px;
     }
 }
 
@@ -1293,8 +1019,6 @@ footer {
 
     .menuBuffet {
         flex-direction: column;
-
-
     }
 
     .buffetIntro {
@@ -1316,11 +1040,6 @@ footer {
 
 
 /* Menu design slut */
-    font-size: 2.2rem;
-    border: 3px solid white;
-}
-
-
 .event-image {
     width: 100%;
     height: 260px;
@@ -1388,9 +1107,6 @@ footer {
     color: black;
 }
 
-
-
-
 .event-buttons .book-bord {
     border: 1px solid transparent;
 }
@@ -1451,8 +1167,6 @@ footer {
 
 /* Arrangementer media queries */
 
-/* Arrangementer media queries */
-
 @media (max-width: 768px) {
 
     .arrangementer {
@@ -1471,6 +1185,9 @@ footer {
     }
 
     .filter-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
         margin: 2rem 0;
     }
@@ -1784,8 +1501,6 @@ footer {
     margin: 0;
 }
 
-
-
 @media (max-width: 768px) {
 
     main {
@@ -1801,9 +1516,7 @@ footer {
         font-size: 36px;
     }
 
-    .madudafhuset-hero-content p {
-        max-width: 90%;
-    }
+  
 
     .madudafhuset-loesninger h2,
     .madudafhuset-galleri h2,
@@ -2390,5 +2103,275 @@ footer {
 }
 
 /* Loading animation SLUT */
-    outline: none; 
+    /* outline: none; 
+} */
+
+/* Footer */
+footer {
+    background-color: var(--Blue);
+    padding-bottom: 2rem;
+}
+/* Kontakt */
+.kontakt-container, 
+.openinghours-container, 
+.FAQ-container, 
+.genveje-container {
+    margin-top: 3rem;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.kontakt-container .logo-footer {
+    width: 150px;
+    height: auto;
+}
+
+.medie-container i {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.medie-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+.headerlokation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.headerlokation i {
+    font-size: 1.5rem;
+}
+
+.kort {
+    width: 100%;
+    height: 400px;
+}
+
+/* Kontaktoplysninger */
+.kontaktoplysning {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kontaktoplysning a {
+    text-decoration: none;
+    color: black;
+    border-bottom: solid 0.5px black;
+}
+
+.kontrol-bookbord-knap img {
+    width: 150px;
+    height: auto;
+}
+
+.kontrol-bookbord-knap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.header-kontakt i {
+    font-size: 1.5rem;
+}
+
+
+/* Åbningstider */
+.header-openinghours, 
+.header-kontakt, 
+.header-genveje {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-openinghours i, 
+.header-faq i, 
+.header-genveje i {
+    font-size: 1.5rem;
+}
+
+.openinghours span {
+    font-weight: 600;
+}
+
+.openinghours {
+    margin-top: 1.5rem;
+}
+
+.openinghours, 
+.ekstra-oplysninger  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* FAQ Accordions */
+.header-faq {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.accordion {
+    background-color: var(--Primary);
+    color: black;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    font-size: 1rem;
+}
+
+.active1, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 10px 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+
+.active1:after {
+    content: "\2796";
+}
+
+.accordions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Genveje */
+.header-genveje {
+    margin-bottom: 1.5rem;
+}
+
+.genveje-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.genveje-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Desktop footer */
+@media (min-width: 768px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 30px;
+    }
+    .kontakt-container,
+    .openinghours-container,
+    .FAQ-container,
+    .genveje-container
+    .lokation {
+        margin: 0;
+    }
+}
+/* Desktop footer 1080px */
+@media (min-width: 1080px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        padding: 2rem 30px;
+        align-items: start;
+    }
+
+    .kontakt-container {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .openinghours-container {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .FAQ-container {
+        grid-column: 3;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .genveje-container {
+        grid-column: 4;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .lokation {
+        grid-column: 3 / 5;
+        grid-row: 1;
+        margin: 0;
+        margin-top: 20rem;
+    }
+
+    .kort {
+        width: 100%;
+        height: 350px;
+    }
+
+    .kontrol-bookbord-knap {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+}
+
+/* Desktop 1440px */
+@media (min-width: 1440px) {
+    .lokation {
+        margin-top: 20rem;
+    }
+
+    .kort {
+        height: 500px;
+    }
+}
+
+/* mobil footer */
+@media (max-width: 465px) {
+    .headerlokation {
+        margin-left: 30px;
+    }
 }

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +8,14 @@
      <link rel="stylesheet" href="./assets/css/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
      <script src="./assets/js/app.js" defer></script>
-  
 </head>
 <body>
-   <!--Nav -->
- <nav>
+<nav>
 	<div class="topnav">
   <a href="./index.html" class="active">
 	<img class="mallemukkenlogo" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukken logo">
   </a>
+  <!-- https://www.w3schools.com/HOWTO/howto_js_mobile_navbar.asp -->
   <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	<i class="fa fa-bars"></i>
@@ -26,13 +23,12 @@
   <!-- Navigation links (hidden by default) -->
   <div id="myLinks">
     <a href="./menu.html">Menu</a>
-    <a href="./arrangement.html">Arrangement</a>
+    <a href="./arrangement.html">Arrangementer</a>
     <a href="./madudafhuset.html">Mad ud af huset</a>
     <a href="./holdselskab.html">Hold selskab</a>
     <a href="./omos.html">Om os</a>
 
     <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
-    <!-- <button class="book-bord">Book Bord</button> -->
   </div>
 </div>
 </nav>
@@ -46,6 +42,11 @@
       <h1>Om os</h1>
       <p>Mallemukkens historie</p>
     </div>
+
+    <div class="showmore">
+    <p>Udforsk mere</p>
+    <i class="fa-solid fa-arrow-down"></i>
+  </div>
   </section>
 
 
@@ -188,81 +189,138 @@
       <img src="./assets/img/MMshop.png" alt="Souvenirs og specialiteter i butikken">
     </div>
   </section>
+
+    <!-- Til top knap -->
+  <button onclick="topFunction()" id="mytopbtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
   <!-- Footer -->
+<footer>
+  <div class="footer-grid">
 
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-brand-name">Mallemukken</div>
-        <p>Vi sætter værdi i…</p>
-        <div class="footer-map">
-          <img src="mallemukken-kort.png" alt="Kort over Thyborøn">
-        </div>
-        <div class="footer-social">
-          <span>Find os på sociale medier:</span>
-          <a href="[facebook.com](https://facebook.com)" target="_blank" aria-label="Facebook">
-            <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-          </a>
-          <a href="[instagram.com](https://instagram.com)" target="_blank" aria-label="Instagram">
-            <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-hours">
-        <h4>🕐 Åbningstider</h4>
-        <p>
-          <strong>Fra 27. Marts – 17. Juni</strong>
-          Mandag-torsdag 11:30–16:00<br>
-          Fredag-lørdag 11:30–21:00<br>
-          Søndag 11:30–16:00
-        </p>
-        <p>
-          <strong>Fra 18. Juni – 8. August</strong>
-          Mandag-torsdag 11:30–21:00<br>
-          Fredag-lørdag 11:30–22:00<br>
-          Søndag 11:30–21:00
-        </p>
-        <p>
-          <strong>Fra 9. August – 17. Oktober</strong>
-          Mandag-torsdag 11:30–16:00<br>
-          Fredag-lørdag 11:30–21:00<br>
-          Søndag 11:30–16:00
-        </p>
-        <p class="note">*Ændringer kan forekomme i forbindelse med helligdage og private fester</p>
-        <p class="note">*Sæson nedlukning d. 17. Oktober 2025 og indtil 19. Marts 2027 med undtagelse af julearrangementer og andre arrangementer</p>
-      </div>
-      <div class="footer-links">
-        <h4>🔗 Genveje</h4>
-        <ul>
-          <li><a href="#">Surf and Work</a></li>
-          <li><a href="./arrangementer.html">Arrangementer</a></li>
-          <li><a href="./menu.html">Menu</a></li>
-          <li><a href="./madudafhuset.html">Mad ud af huset</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h4>Kontakt</h4>
-        <p>Tlf: +45 42 80 05 27</p>
-        <p>Mail: mail@mallemukken.dk</p>
-        <p>Adresse: Mallemukken – Restaurant &amp; Cafe,<br>
-           Kystcentervej 1, 7680 Thyborøn, Denmark</p>
-        <p>CVR:</p>
-        <a href="#" class="kontrol-badge">
-          😊 Se kontrol rapport
+    <!-- Kontakt -->
+    <div class="kontakt-container">
+      <div class="medie-container">
+        <a href="./index.html">
+          <img class="logo-footer" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukkens logo" loading="lazy">
         </a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      &copy; 2026 Mallemukken Restaurant &amp; Cafe · Kystcentervej 1, 7680 Thyborøn
-    </div>
-  </footer>
+        <div class="sociale-links">
+          <a href="https://www.facebook.com/mallemukken.dk/">
+            <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/restaurantmallemukken">
+              <i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          
+          <div class="kontaktoplysning">
+            <div class="header-kontakt">
+              <i class="fa-solid fa-phone"></i>
+              <h3>Kontakt</h3>
+            </div>
+            <p><a href="tel:+4542800527">+4542800527</a></p>
+            <p><a href="mailto:mail@mallemukken.dk">Mail: mallemukken.dk</a></p>
+            <p>Adresse: Mallemukken - Restaurant & Café, Kystcentervej 1, 7680 Thyborøn, Denmark</p>
+            <p>CVR: 39972859</p>
+          </div>
+          
+          <div class="kontrol-bookbord-knap">
+            <a href="https://www.findsmiley.dk/974501">
+              <img src="./assets/img/kontrolrapport_logo.svg" alt="Mallenmukkens kontrol" loading="lazy">
+            </a>
+            <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
+          </div>
+        </div>
+
+        <!-- Åbningstider -->
+        <div class="openinghours-container">
+          <div class="header-openinghours">
+            <i class="fa-regular fa-clock"></i>
+            <h3>Åbningstider</h3>
+          </div>
+          
+          <div class="openinghours">
+            <div class="opening-datoer">
+              <h4>Fra 27. Marts - 17. Juni</h4>
+              <p>Mandag-torsdag 11:30-16:00</p>
+              <p>Fredag-lørdag 11:30-21:00</p>
+              <p>Søndag 11:30-16:00</p>
+            </div>
+            
+            <div class="opening-datoer">
+              <h4>Fra 18. Juni - 8. August</h4>
+              <p>Mandag-torsdag 11:30-21:00</p>
+              <p>Fredag-lørdag 11:30-22:00</p>
+              <p>Søndag 11:30-21:00</p>
+            </div>
+            
+            <div class="opening-datoer">
+              <h4>Fra 9. August - 17. Oktober</h4>
+              <p>Mandag-torsdag 11:30-16:00</p>
+              <p>Fredag-lørdag 11:30-21:00</p>
+              <p>Søndag 11:30-16:00</p>
+            </div>
+            
+            <div class="ekstra-oplysninger">
+              <p>*Ændringer kan forekomme i forbindelse med helligdage og private fester</p>
+              
+              <p>*Sæson nedlukning <span>d. 17. Oktober 2026 og indtil 19. Marts 2027</span> med undtagelse af juleweekenden og andre arrangementer</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ -->
+        <!-- Accordions er lavet ud fra W3S https://www.w3schools.com/howto/howto_js_accordion.asp  -->
+        <div class="FAQ-container">
+          <div class="header-faq">
+            <i class="fa-regular fa-circle-question"></i>
+            <h3>Ofte stillede spørgsmål</h3>
+          </div>
+          
+          <!-- Accordions -->
+          <div class="accordions-container">
+            <div class="accordion-item">
+              <button class="accordion">Hvornår har i buffet?</button>
+              <div class="panel">
+                <p>Vi tilbyder buffet på udvalgte datoer. Se kommende datoer og menu under “Mallemukkens buffet.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion">Tager i højde for allergier?</button>
+              <div class="panel">
+                <p>Ja, vi tager hensyn til allergier. Vi anbefaler, at du henvender dig til personalet, så vi kan vejlede dig om vores retter.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion">Tilbyder i takeaway?</button>
+              <div class="panel">
+                <p>Ja, vi tilbyder takeaway. Du kan se vores udvalg og bestille fra menuen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lokation">
+          <div class="headerlokation">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Lokation</h3>
+          </div>
+            <!-- Embeded kort fra google maps -->
+            <iframe class="kort" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.2077230410414!2d8.210300723789604!3d56.705023053564894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649f4fa5b65f3eb%3A0xa6042b13bc29f9ac!2sRestaurant%20Mallemukken!5e0!3m2!1sda!2sdk!4v1780576270541!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
     
+        <!-- Genveje -->
+        <div class="genveje-container">
+          <div class="header-genveje">
+            <i class="fa-solid fa-link"></i>
+            <h3>Genveje</h3>
+          </div>
+          
+          <div class="genveje-link">
+            <a href="#"><p>Surf and work</p></a>
+            <a href="./arrangementer.html"><p>Arrangementer</p></a>
+            <a href="./madudafhuset.html"><p>Mad ud af huset</p></a>
+          </div>
+        </div>
+        
+      </div>
+      </footer>
 </body>
 </html>
