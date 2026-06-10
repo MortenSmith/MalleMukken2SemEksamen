@@ -1,3 +1,17 @@
+// Navbar 
+function myFunction() {
+    const links = document.getElementById("myLinks");
+    links.classList.toggle("open");
+}
+
+
+function myFunction() {
+    const x = document.getElementById("myLinks");
+    x.style.display = x.style.display === "block" ? "none" : "block";
+}
+
+
+
 // Arrangementer
 
 const baseUrl = "https://eksamen.twotone.dk/wp-json/wp/v2/posts";
@@ -204,7 +218,7 @@ function renderArrangementer(posts) {
                     </a>
 
                     <a href="arrangement.html?id=${post.id}"
-                       class="book-bord1">
+                       class="readmorebtn">
                         Læs mere
                     </a>
 

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad til festen</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="./assets/js/madudafhuset.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="topnav">
+            <a href="#home" class="active">
+                <img class="mallemukkenlogo" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukken logo">
+            </a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="#menu">Menu</a>
+                <a href="#arrangement">Arrangement</a>
+                <a href="#madudafhuset">Mad ud af huset</a>
+                <a href="#holdselskab">Hold selskab</a>
+                <a href="#omos">Om os</a>
+
+                <button class="book-bord">Book bord</button>
+            </div>
+            <!-- Hamburger menu -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+
+
+
+    <section class="madudafhuset-hero">
+
+        <img src="./assets/img/pålægs.jpg" alt="Mad til festen">
+
+        <article class="madudafhuset-hero-content">
+
+            <h1>Mad til festen</h1>
+
+            <p>
+                Vi laver lækker frokost og mad ud af huset til både små og store fester.
+            </p>
+
+            <a href="#madtilfesten-menu" class="madudafhuset-scroll-link">
+                Læs mere her
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+        </article>
+
+    </section>
+    <main>
+
+        <section class="madtilfesten-menu" id="madtilfesten-menu">
+
+            <h2>Mad til festen menu</h2>
+
+            <div class="madtilfesten-menu-grid">
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Sandwich</h3>
+
+                        <ul>
+                            <li>Serrano skinke</li>
+                            <li>Kylling</li>
+                            <li>Frikadelle</li>
+                            <li>Tun</li>
+                            <li>Laks</li>
+                            <li>Æg / Rejer</li>
+                            <li>Crispy chicken</li>
+                            <li>Ribbensteg</li>
+                        </ul>
+
+                        <p class="menu-underoverskrift">Vegetar:</p>
+
+                        <ul>
+                            <li>Falafel</li>
+                            <li>Tomat / mozzarella</li>
+                        </ul>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>Sandwich 59,-</p>
+                        <p>Luksus 79,-</p>
+                    </section>
+
+                    <img src="./assets/img/sandwich.png" alt="Sandwich">
+
+                </article>
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Pålægskagemand</h3>
+
+                        <ul>
+                            <li>Pålægskagemand</li>
+                            <li>1/2 person</li>
+                        </ul>
+
+                        <p class="menu-underoverskrift">1/2 Pålægskagemand</p>
+                        <p class="menu-underoverskrift">Landgangsbrød</p>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>750,-</p>
+                        <p>400,-</p>
+                        <p>59,-</p>
+                    </section>
+
+                    <img src="./assets/img/pålægs.jpg" alt="Pålægskagemand">
+
+                </article>
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Sliders</h3>
+
+                        <p class="menu-underoverskrift">Minimum 10 stk</p>
+
+                        <ul>
+                            <li>Fiskefilet</li>
+                            <li>Roastbeef</li>
+                            <li>Ribbensteg</li>
+                            <li>Crispy chicken</li>
+                            <li>Serrano</li>
+                        </ul>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>Pr. stk. 27,-</p>
+                        <p>10 stk. 250,-</p>
+                    </section>
+
+                    <img src="./assets/img/sliders.png" alt="Sliders">
+
+                </article>
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Salater</h3>
+
+                        <p class="menu-underoverskrift">
+                            Salat inkl. brød, pesto og dressing
+                        </p>
+
+                        <ul>
+                            <li>Kylling</li>
+                            <li>Serrano og mozzarella</li>
+                            <li>Falafel</li>
+                            <li>Varmrøget laks</li>
+                            <li>Æg og rejer</li>
+                            <li>Kebab</li>
+                        </ul>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>59,-</p>
+                    </section>
+
+                    <img src="./assets/img/salatertogo.jpg" alt="Salater">
+
+                </article>
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Tapasbræt</h3>
+
+                        <p class="menu-underoverskrift">Minimum 10 personer</p>
+
+                        <ul>
+                            <li>3 slags pølse, 2 slags ost, nødder og pesto</li>
+
+                        </ul>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>Pr. kuvert 90,-</p>
+                        <p>Tilkøb oliven og pesto 20,-</p>
+                    </section>
+
+                    <img src="./assets/img/tapas.png" alt="Tapasbræt">
+
+                </article>
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Smørrebrød</h3>
+
+                        <ul>
+                            <li>Æg og rejer</li>
+                            <li>Fiskefilet m. rejer</li>
+                            <li>Rullepølse</li>
+                            <li>Roastbeef</li>
+                            <li>Dyrlægens natmad</li>
+                            <li>Hamburgerryg</li>
+                            <li>Spegepølse</li>
+                            <li>Flæskesteg</li>
+                        </ul>
+
+                        <p class="menu-note">
+                            Vegatariske og veganske varianter kan også bestilles. </p>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>Pr. stk. 38,-</p>
+                    </section>
+
+                    <img src="./assets/img/smørrebrød.png" alt="Smørrebrød">
+
+                </article>
+
+                <article class="madtilfesten-menu-kategori">
+
+                    <section>
+                        <h3>Frokosttallerkner</h3>
+
+                        <ul>
+                            <li>3 små retter</li>
+                            <li>5 små retter inkl. lidt sødt</li>
+                        </ul>
+                    </section>
+
+                    <section class="menu-priser">
+                        <p>Pr. stk. 139,-</p>
+                        <p>Pr. stk. 229,-</p>
+                    </section>
+
+                    <img src="./assets/img/frokost.jpg" alt="Frokosttallerken">
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="bestilmad">
+
+            <h2>Bestil din mad</h2>
+
+            <div class="bestilmad-grid">
+
+                <article class="event-card bestilmad-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+
+                    <div class="event-content">
+
+                        <h3>Mad til festen</h3>
+
+                        <p class="event-text">
+                            Bestil mad ud af huset og få altid leveret maden direkte til døren.
+                        </p>
+
+                        <div class="event-buttons">
+                            <a href="#" class="book-bord">Bestil mad</a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="event-card bestilmad-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+
+                    <div class="event-content">
+
+                        <h3>Information om allergener</h3>
+
+                        <p class="event-text">
+                            Har du særlige ønsker eller allergener, så skriv det gerne ved bestilling.
+                            Vi hjælper med at finde en løsning.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="tilbud-section">
+
+            <h2>Andre aktuelle tilbud</h2>
+
+            <div class="tilbud-grid"></div>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>
