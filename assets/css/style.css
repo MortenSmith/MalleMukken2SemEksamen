@@ -659,7 +659,6 @@ header::after {
 
 .headingMenu {
     text-align: center;
-    font-size: 36px;
     font-weight: 300;
 }
 
@@ -753,7 +752,17 @@ header::after {
 
     border-radius: 50%;
     background: var(--Secondary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.ikonMenu i {
+    color: white;
+    font-size: 1.8rem;
+}
+
 
 .oplevelseindhold {
     display: flex;
