@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="./assets/js/menu.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="topnav">
+            <a href="#home" class="active">
+                <img class="mallemukkenlogo" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukken logo">
+            </a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="#menu">Menu</a>
+                <a href="#arrangement">Arrangement</a>
+                <a href="#madudafhuset">Mad ud af huset</a>
+                <a href="#holdselskab">Hold selskab</a>
+                <a href="#omos">Om os</a>
+
+                <button class="book-bord">Book bord</button>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <section class="menuHero">
+
+        <img src="./assets/img/menuHero.jpg" alt="billede af " loading="lazy">
+
+        <article class="menuHeroContent">
+            <h1>Fra havet til bord</h1>
+
+            <p>
+                Friske råvarer tilberedt med omtanke
+            </p>
+
+            <a href="#menu" class="menuScroll-link">
+
+                Se menu
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </article>
+
+    </section>
+    <main class="menuMain">
+
+        <h2 class="headingMenu">Vores menu</h2>
+        <!-- Menu knapper -->
+        <section class="filter-buttons">
+            <button class="filter-btn active" data-category="9">Frokost</button>
+            <button class="filter-btn" data-category="10">Aften</button>
+            <button class="filter-btn" data-category="11">Børn</button>
+            <button class="filter-btn" data-category="13">Dessert</button>
+            <button class="filter-btn" data-category="12">Drikkevarer</button>
+        </section>
+        <section class="drikkelseKategori">
+            <button class="sub-btn" data-category="27">Øl</button>
+            <button class="sub-btn" data-category="33">Vin</button>
+            <button class="sub-btn" data-category="40">Drinks</button>
+        </section>
+
+
+        <!-- Menu -->
+
+        <section class="menuen">
+
+            <p class="menuTid"></p>
+
+            <div class="menu-container">
+            </div>
+        </section>
+
+        <section class="menuInfoboks">
+
+            <article class="allergener">
+                <div class="ikonMenu">
+                    <i class="fa-solid fa-info"></i>
+                </div>
+
+                <h3>Information om allergener</h2>
+                    <p>
+                        Din tryghed og dine behov er vigtige for os. Spørg vores personale om allergener i vores mad,
+                        før du
+                        afgiver din bestilling. Hvad enten du ønsker en vegetarisk, vegansk eller glutenfri ret, står vi
+                        klar til at hjælpe.
+                    </p>
+
+            </article>
+            <article class="kitchentime">
+                <div class="ikonMenu">
+                    <i class="fa-solid fa-info"></i>
+                </div>
+                <h3>Køkkenets åbningstid </h2>
+                    <p>Køkkenet lukker for servering af mad kl 20:00. Vi takker for forståelsen. </p>
+
+            </article>
+
+        </section>
+
+        <section class="menuBuffet">
+
+            <section class="buffetIntro">
+                <article>
+                    <h2>Mallemukkens buffet</h2>
+                    <p>Forkæl dig selv med Mallemukkens lækre buffet! Den bugner af dejlige retter - røget fisk, fiske-
+                        og
+                        kødretter, salater, tapas, pålæg og gode oste. Buffeten serveres hele juli måned samt udvalgte
+                        datoer -
+                        se herunder hvornår</p>
+                </article>
+                <article class="kalender">
+                    <h3>Buffetdatoer juni 2026</h3>
+
+                    <p>*Ændringer kan forekomme</p>
+                    <p>*5/6 (Farsdag), Tappasbuffet 17:30-20:00,
+                        <br> *6/6 buffet 11:30-14-30 & 17:30-20:00,
+                        <br> *20/6
+                        (Rasmusklumps
+                        75 års fødselsdag), pandekagebuffet 11:30-14-30 & 17:30-20:00
+                    </p>
+
+                </article>
+
+                <article class="buffetPriser">
+                    <h3>Priser</h3>
+                    <p>
+                        Frokostbuffet 249,- <br>
+                        Aftenbuffet 299,- <br>
+                        Børn u/12 119,- <br>
+                        Børn u/3 0,-
+                    </p>
+                </article>
+
+                <article class="buffetInformation">
+                    <h3>Praktisk information</h3>
+                    <p>Allergener - Spørg personalet om allergener og særlige kostbehov. <br>
+                        God buffetkultur - Tag gerne flere gange, men kun det du kan spise. Sammen mindsker vi madspild.
+                    </p>
+                </article>
+            </section>
+
+            <img class="buffetImg" src="./assets/img/menuBuffet.jpg" alt="Billede af Mallemukkens buffet."
+                loading="lazy">
+        </section>
+
+    </main>
+</body>
+
+</html>
