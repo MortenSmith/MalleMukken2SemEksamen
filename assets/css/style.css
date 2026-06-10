@@ -5,6 +5,15 @@
     scroll-behavior: smooth;
     margin: 0;
     line-height: 1.5;
+    
+}
+
+body {
+    background-color: var(--Primary);
+}
+
+body {
+    background-color: var(--Primary);
 }
 
 body {
@@ -12,6 +21,7 @@ body {
 }
 
 main {
+
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -45,6 +55,12 @@ h5 {
     font-family: "Playfair Display", serif;
 }
 
+h2 {
+    border-bottom: 2px solid var(--Blue);
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
 /* Book bord knap */
 .book-bord {
     padding: 0.5rem 1.5rem;
@@ -57,17 +73,24 @@ h5 {
     box-shadow: var(--buttonShadow);
     width: fit-content;
     display: block;
-    margin-bottom: 0.5rem;
+    text-decoration: none;
 }
 
-.book-bord:hover {
-    background-color: white;
-    color: #A90C43;
+.book-bord,
+.topnav .book-bord {
+    background-color: var(--Secondary);
+    color: white;
     transition: 0.5s;
 }
 
+.book-bord:hover,
+.topnav .book-bord:hover {
+    background-color: white;
+    color: #A90C43;
+}
+
 /* Læs mere knap */
-.book-bord1 {
+.readmorebtn {
     padding: 0.5rem 1.5rem;
     border-radius: 8px;
     border: solid var(--Secondary) 1px;
@@ -77,24 +100,90 @@ h5 {
     font-weight: 500;
     box-shadow: var(--buttonShadow);
     margin: 0.5rem;
+    text-decoration: none;
 }
 
-.book-bord1:hover {
+.readmorebtn:hover {
     background-color: var(--Secondary);
     color: white;
     transition: 0.5s;
-
 }
 
-/* Navbar mobil */
+/* Køb gavekort knap */
+.giftcardbtn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: solid var(--Secondary) 2px;
+    background-color: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    box-shadow: var(--buttonShadow);
+    text-decoration: none;
+}
+
+.giftcardbtn:hover {
+    background-color: var(--Secondary);
+    color: white;
+    transition: 0.5s;
+}
+
+.hero-btn .book-bord,
+.hero-btn .giftcardbtn {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    height: 44px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.event-buttons .book-bord,
+.event-buttons .book-bord1 {
+    white-space: nowrap; 
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.hero-btn .book-bord {
+    margin: 0;
+}
+
+/* Navbar */
 nav {
     background-color: var(--Blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* Navbar shrink effekt */
+nav.scrolled {
+    background-color: rgba(134, 160, 200, 0.85);  /* let transparent */
+    backdrop-filter: blur(8px); /* frosted glass effekt */
+}
+
+nav.scrolled .topnav {
+    padding: 4px 20px;  /* mindre padding når scrollet */
+}
+
+nav.scrolled .mallemukkenlogo {
+    width: 100px;       /* mindre logo når scrollet */
+    transition: width 0.3s ease;
 }
 
 .mallemukkenlogo {
     width: 150px;
     height: auto;
-    background: none;
 }
 
 .icon i {
@@ -103,24 +192,11 @@ nav {
 
 .topnav {
     background-color: var(--Blue);
-    overflow: hidden;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
-}
-
-.topnav #myLinks {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-
-}
-
-.topnav #myLinks.open {
-    display: flex;
 }
 
 .topnav a {
@@ -140,167 +216,323 @@ nav {
     margin-left: auto;
 }
 
-/* Card */
-/* Arrangement cards */
-.arrangementer {
-    padding: var(--largeGap) 0 6rem;
+/* Mobil: skjul links som standard */
+.topnav #myLinks {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
 
-.arrangement-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.topnav #myLinks.open {
+    display: flex;
+}
+
+/* Desktop nav */ 
+@media (min-width: 768px) {
+    .topnav {
+        padding: 8px 32px;
+        flex-wrap: nowrap;
+    }
+
+    .topnav .icon i {
+        display: none;
+    }
+
+    .topnav #myLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .topnav #myLinks a {
+        display: inline-block;
+        padding: 8px 12px;
+    }
+
+    .book-bord {
+        margin: 0;
+    }
+
+    .topnav #myLinks a.active {
+        border-bottom: 2px solid var(--Secondary);
+    }
+
+    .mallemukkenlogo {
+        width: 80%;
+    }
+}
+
+/* Arrangement start */
+    width: 150px;
+    }
+}
+
+/* Forside */
+header {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.hero-images {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-images picture,
+.hero-images img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero-logo,
+.hero-btn,
+.showmore {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.hero-logo {
+    top: -130%;
+    width: 300px;
+    filter: drop-shadow(1px 2px 6px rgba(0, 0, 0, 0,8));
+}
+
+.hero-btn {
+    top: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.showmore {
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.showmore {
+    color: white;
+    text-shadow: var(--headerShadow);
+}
+
+/* Animation på pil  */
+.showmore i {
+    animation: bounce 1.5s infinite;
+    font-size: 1.5rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+/* Mobil knap */
+@media (max-width: 465px) {
+    .book-bord, .giftcardbtn {
+        padding: 0.5rem 2.4rem;
+    }
+}
+
+/* Underline på overskrifter */
+.line {
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--Blue);
+    margin-bottom: 2rem;
+}
+
+.header-hvadvitilbyder, 
+.header-nyheder, 
+.header-oplevelse, 
+.header-akutelletilbud {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+/* Slideshow på mobil */
+.focused-entry-slideshow-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.myslides {
+    display: none;
+}
+
+.myslides.active {
+    display: block;
+}
+
+.tekst-indhold {
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.tekst-indhold picture,
+.tekst-indhold img {
+    width: 100%;
+    height: 100vw; 
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease;
+}
+
+.tekst-indhold:hover img {
+    transform: scale(1.05);
+}
+
+/* Mørkt overlay */
+.tekst-indhold::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Tekst oven på billede */
+.tekst-indhold h3,
+.tekst-indhold p {
+    position: absolute;
+    left: 1rem;
+    color: white;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.tekst-indhold h3 {
+    top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.tekst-indhold p {
+    top: 4rem;
+}
+
+/* Pil styling */
+.slide-next {
+    position: absolute;
+    right: 1rem;
+    top: 90%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animation på pil tl højre */
+.slide-next i {
+    animation: goright 3s infinite;
+    font-size: 1.5rem;
+}
+
+@keyframes goright {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(8px);
+    }
+}
+
+/* Progress bar */
+.slide-progress {
+    height: 7px;
+    background: #ddd;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.slide-progress-bar {
+    height: 100%;
+    background: var(--Secondary);
+    transition: width 0.3s ease;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Nyheder */
+.header-nyheder {
+    margin-bottom: 2rem;
+}
+
+.nyheder-grid {
+    display: flex;
+    flex-direction: column;
     gap: 6rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.event-card {
-    background-color: white;
-    border-radius: 10px;
+/* Oplevelse */
+.oplevelse-container article {
     position: relative;
+}
+
+.oplevelse-card {
+    display: none;
+    background-color: white;
+    padding: 2rem;
     box-shadow: var(--buttonShadow);
-    overflow: visible;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease
 }
 
-.event-icon {
-    position: absolute;
-    top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-
-    background-color: var(--Secondary);
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 2.2rem;
-    border: 3px solid white;
-
+.oplevelse-card.active {
+    display: block;
 }
 
-.event-image {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.dots-oplevelse-container {
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
-.event-content {
-    padding: var(--largeGap);
-}
-
-.event-category {
-    margin-bottom: var(--smallGap);
-    color: #555;
-}
-
-.event-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--medGap);
-}
-
-.event-text {
-    margin-bottom: var(--largeGap);
-}
-
-.event-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--medGap);
-    margin-bottom: var(--largeGap);
-}
-
-.event-info p {
-    display: flex;
-    align-items: center;
-    gap: var(--medGap);
-}
-
-.event-info i {
-    font-size: 1.3rem;
-}
-
-.event-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.event-buttons .book-bord,
-.event-buttons .book-bord1 {
-    padding: 0.5rem 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0;
-
-    text-decoration: none;
-}
-
-/* sørger for samme højde */
-
-.event-buttons .book-bord {
-    border: 1px solid transparent;
-}
-
-.event-buttons .book-bord1 {
-    border: 1px solid var(--Secondary);
-}
-
-/* Filter knapper til arrangment siden */
-
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6rem;
-
-    margin: 4rem 0;
-}
-
-.filter-btn {
-    min-width: 140px;
-
-    padding: 0.4rem 1.5rem;
-
-    border: 2px solid var(--Blue);
-    border-radius: 6px;
-
-    background-color: transparent;
-    color: black;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-}
-
-/* Hover */
-
-.filter-btn:hover {
-    background-color: var(--Blue);
-    box-shadow: var(--buttonShadow);
-}
-
-/* Aktiv knap */
-
-.filter-btn.active {
-    background-color: var(--Blue);
-    box-shadow: var(--buttonShadow);
-}
-
-/* Fokus til accessibility */
+.oplevelse-card img {
+    width: 40%;
+} 
 
 .filter-btn:focus {
     outline: none;
@@ -534,6 +766,458 @@ nav {
 
     border-radius: 50%;
     background: var(--Secondary);
+.oplevelseindhold {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.oplevelseindhold span {
+    font-weight: 600;
+}
+
+/* Slideshow for oplevelse card */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active-dot {
+    background-color: var(--Secondary);
+}
+
+/* Aktuelle tilbud */
+
+
+/* Til top knap */
+#mytopbtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--Secondary);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: var(--buttonShadow);
+}
+
+#mytopbtn i {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.2s ease-out;
+} 
+
+#mytopbtn:hover {
+    background-color: #74092e;
+}
+
+#mytopbtn:hover i {
+    transform: translateY(-4px);
+}
+
+/* Desktop 1080px */
+@media (min-width: 1080px) {
+    .hero-logo {
+        width: 450px;
+        top: -450%;
+    }
+
+    .hero-btn {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .hero-btn .book-bord,
+    .hero-btn .giftcardbtn {
+        width: auto;
+        padding: 0.5rem 2.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Focused entry points*/
+    .mysildes {
+        display: block !important; 
+    }
+
+    .slide-next,
+    .slide-progress {
+        display: none;
+    }
+
+    .focused-entry-slideshow-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
+        gap: 15px;
+    }
+
+    .myslides:first-child {
+        grid-column: 1 / 3;
+    }
+
+    .tekst-indhold picture, 
+    .tekst-indhold img {
+        height: 350px;
+    }
+
+    .myslides:first-child .tekst-indhold img {
+        height: 400px;
+    }
+
+    /* Nyheder */
+    .nyheder-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .oplevelse-card {
+        display: block !important;
+    }
+
+    .dots-oplevelse-container {
+        display: none;
+    }
+
+    .oplevelse-container article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+/* Desktop 1440px */
+@media (min-width: 1440px) {
+    main {
+        max-width: 1350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nyheder-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--Blue);
+    padding-bottom: 2rem;
+}
+/* Kontakt */
+.kontakt-container, 
+.openinghours-container, 
+.FAQ-container, 
+.genveje-container {
+    margin-top: 3rem;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.kontakt-container .logo-footer {
+    width: 150px;
+    height: auto;
+}
+
+.medie-container i {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.medie-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+.headerlokation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.headerlokation i {
+    font-size: 1.5rem;
+}
+
+.kort {
+    width: 100%;
+    height: 400px;
+}
+
+/* Kontaktoplysninger */
+.kontaktoplysning {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kontaktoplysning a {
+    text-decoration: none;
+    color: black;
+    border-bottom: solid 0.5px black;
+}
+
+.kontrol-bookbord-knap img {
+    width: 150px;
+    height: auto;
+}
+
+.kontrol-bookbord-knap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.header-kontakt i {
+    font-size: 1.5rem;
+}
+
+
+/* Åbningstider */
+.header-openinghours, 
+.header-kontakt, 
+.header-genveje {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-openinghours i, 
+.header-faq i, 
+.header-genveje i {
+    font-size: 1.5rem;
+}
+
+.openinghours span {
+    font-weight: 600;
+}
+
+.openinghours {
+    margin-top: 1.5rem;
+}
+
+.openinghours, 
+.ekstra-oplysninger  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* FAQ Accordions */
+.header-faq {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.accordion {
+    background-color: var(--Primary);
+    color: black;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    font-size: 1rem;
+}
+
+.active1, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 10px 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+
+.active1:after {
+    content: "\2796";
+}
+
+.accordions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Genveje */
+.header-genveje {
+    margin-bottom: 1.5rem;
+}
+
+.genveje-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.genveje-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Desktop footer */
+@media (min-width: 768px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 30px;
+    }
+    .kontakt-container,
+    .openinghours-container,
+    .FAQ-container,
+    .genveje-container
+    .lokation {
+        margin: 0;
+    }
+}
+/* Desktop footer 1080px */
+@media (min-width: 1080px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        padding: 2rem 30px;
+        align-items: start;
+    }
+
+    .kontakt-container {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .openinghours-container {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .FAQ-container {
+        grid-column: 3;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .genveje-container {
+        grid-column: 4;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .lokation {
+        grid-column: 3 / 5;
+        grid-row: 1;
+        margin: 0;
+        margin-top: 20rem;
+    }
+
+    .kort {
+        width: 100%;
+        height: 350px;
+    }
+
+    .kontrol-bookbord-knap {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+}
+
+/* Desktop 1440px */
+@media (min-width: 1440px) {
+    .lokation {
+        margin-top: 20rem;
+    }
+
+    .kort {
+        height: 500px;
+    }
+}
+
+/* mobil footer */
+@media (max-width: 465px) {
+    .headerlokation {
+        margin-left: 30px;
+    }
+}
+
+/* Arrangement cards */
+.arrangementer {
+    padding: var(--largeGap) 0 6rem;
+}
+
+.arrangement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: var(--buttonShadow);
+    overflow: visible;
+}
+
+.event-icon {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    background-color: var(--Secondary);
+    color: white;
 
     display: flex;
     justify-content: center;
@@ -632,3 +1316,1079 @@ nav {
 
 
 /* Menu design slut */
+    font-size: 2.2rem;
+    border: 3px solid white;
+}
+
+
+.event-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.event-content {
+    padding: var(--largeGap);
+}
+
+.event-category {
+    margin-bottom: var(--smallGap);
+    color: #555;
+}
+
+.event-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--medGap);
+}
+
+.event-text {
+    margin-bottom: var(--largeGap);
+}
+
+.event-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--medGap);
+    margin-bottom: var(--largeGap);
+}
+
+.event-info p {
+    display: flex;
+    align-items: center;
+    gap: var(--medGap);
+}
+
+.event-info i {
+    font-size: 1.3rem;
+}
+
+.event-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.event-buttons .book-bord,
+.event-buttons .readmorebtn {
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0;
+
+    box-shadow: var(--buttonShadow);
+    text-decoration: none;
+}
+
+
+.book-bord1 {
+    color: black;
+}
+
+
+
+
+.event-buttons .book-bord {
+    border: 1px solid transparent;
+}
+
+.event-buttons .book-bord1 {
+    border: 1px solid var(--Secondary);
+}
+
+/* Filter knapper til arrangmenter */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+
+    margin: 4rem 0;
+}
+
+.filter-btn {
+    min-width: 140px;
+
+    padding: 0.4rem 1.5rem;
+
+    border: 2px solid var(--Blue);
+    border-radius: 6px;
+
+    background-color: transparent;
+    color: black;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+
+.filter-btn:hover {
+    background-color: var(--Blue);
+    box-shadow: var(--buttonShadow);
+}
+
+
+
+.filter-btn.active {
+    background-color: var(--Blue);
+    box-shadow: var(--buttonShadow);
+}
+
+
+.filter-btn:focus {
+    outline: none;
+}
+
+/* Arrangementer media queries */
+
+/* Arrangementer media queries */
+
+@media (max-width: 768px) {
+
+    .arrangementer {
+        padding-bottom: 4rem;
+    }
+
+    .arrangement-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .event-card {
+        margin-top: 3rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .filter-buttons {
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .filter-btn {
+        min-width: auto;
+        width: 70%;
+    }
+
+    .event-buttons {
+        flex-direction: column;
+    }
+
+    .event-buttons .book-bord,
+    .event-buttons .readmorebtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Arrangementer SLUT */
+
+/* Mad ud af huset START */
+
+.madudafhuset-hero {
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.madudafhuset-hero img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.madudafhuset-hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--medGap);
+    text-align: center;
+    color: white;
+}
+
+.madudafhuset-hero-content h1 {
+    font-size: 4rem;
+    text-shadow: var(--headerShadow);
+}
+
+.madudafhuset-hero-content p {
+    max-width: 650px;
+    text-shadow: var(--headerShadow);
+}
+
+.madudafhuset-scroll-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--smallGap);
+    margin-top: var(--largeGap);
+    font-family: "Montserrat", sans-serif;
+}
+
+.madudafhuset-scroll-link i {
+    font-size: 1.5rem;
+}
+
+/* Løsninger */
+
+.madudafhuset-loesninger {
+    margin-bottom: 6rem;
+}
+
+.madudafhuset-loesninger h2 {
+    margin-bottom: 4rem;
+}
+
+.madudafhuset-loesning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.madudafhuset-loesning-card {
+    margin-top: 3rem;
+    transition: transform 0.4s ease-out;
+}
+
+
+.madudafhuset-loesning-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Galleri */
+
+.madudafhuset-galleri {
+    margin-bottom: 6rem;
+}
+
+.madudafhuset-galleri h2 {
+    margin-bottom: 3rem;
+}
+
+.madudafhuset-galleri-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 300px 300px;
+    gap: var(--medGap);
+}
+
+.galleri-billede {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--buttonShadow);
+}
+
+.galleri-billede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.galleri-billede:hover img {
+    transform: scale(1.08);
+}
+
+.galleri-tekst {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+}
+
+.galleri-billede:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.galleri-billede:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.galleri-billede:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.galleri-billede:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.galleri-billede:nth-child(5) {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+/* Ja tak tilbud cards */
+
+.tilbud-section {
+    padding: 4rem 0;
+}
+
+.tilbud-section h2 {
+    margin-bottom: 2rem;
+}
+
+.tilbud-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--largeGap);
+}
+
+.tilbud-card {
+    background-color: white;
+    box-shadow: var(--buttonShadow);
+    overflow: hidden;
+    transition: transform 0.4s ease-out;
+}
+
+.tilbud-card:hover {
+    transform: translateY(-5px);
+}
+
+.tilbud-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.tilbud-content {
+    padding: var(--largeGap);
+}
+
+.tilbud-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--smallGap);
+    text-align: center;
+}
+
+.tilbud-text {
+    margin-bottom: var(--medGap);
+    margin-top: var(--smallGap);
+}
+
+.tilbud-dato,
+.tilbud-pris {
+    font-weight: 500;
+    text-align: center;
+}
+
+.tilbud-card .book-bord {
+    margin: var(--medGap) auto 0;
+    width: 80%;
+    text-align: center;
+}
+
+/* Kontakt */
+
+.madudafhuset-kontakt {
+    background-color: var(--Secondary);
+    color: white;
+    padding: 3rem;
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+.madudafhuset-kontakt a {
+    color: white;
+}
+
+.madudafhuset-kontakt-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--medGap);
+}
+
+.madudafhuset-address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: var(--medGap);
+}
+
+.madudafhuset-address p {
+    display: flex;
+    align-items: center;
+    gap: var(--medGap);
+}
+
+.madudafhuset-address i {
+    font-size: 1.2rem;
+}
+
+.madudafhuset-address a {
+    color: white;
+    text-decoration: none;
+}
+
+.madudafhuset-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--medGap);
+}
+
+.madudafhuset-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smallGap);
+    font-family: "Montserrat", sans-serif;
+}
+
+.madudafhuset-form input,
+.madudafhuset-form textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.madudafhuset-besked-felt {
+    grid-column: 1 / -1;
+}
+
+.madudafhuset-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.madudafhuset-form .readmorebtn {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+@media (max-width: 768px) {
+
+    main {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .madudafhuset-hero img {
+        height: 400px;
+    }
+
+    .madudafhuset-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .madudafhuset-hero-content p {
+        max-width: 90%;
+    }
+
+    .madudafhuset-loesninger h2,
+    .madudafhuset-galleri h2,
+    .tilbud-section h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .madudafhuset-loesning-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .madudafhuset-loesning-card {
+        width: 75vw;
+        min-width: 75vw;
+        flex-shrink: 0;
+    }
+
+    .madudafhuset-galleri-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .galleri-billede,
+    .galleri-billede:nth-child(1),
+    .galleri-billede:nth-child(2),
+    .galleri-billede:nth-child(3),
+    .galleri-billede:nth-child(4),
+    .galleri-billede:nth-child(5) {
+        width: 220px;
+        min-width: 220px;
+        height: 250px;
+        grid-column: auto;
+        grid-row: auto;
+        flex-shrink: 0;
+    }
+
+    .tilbud-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .tilbud-card {
+        width: 75vw;
+        min-width: 75vw;
+        flex-shrink: 0;
+    }
+
+    .madudafhuset-kontakt {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .madudafhuset-form {
+        grid-template-columns: 1fr;
+    }
+
+    .madudafhuset-form button {
+        width: 100%;
+    }
+}
+
+/* mad ud af huset SLUT */
+
+
+
+/* Selskab hos os START */
+
+/* Selskab fordele */
+
+.selskab-fordele {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+    margin: 6rem 0;
+}
+
+.selskab-fordel {
+    text-align: center;
+}
+
+.selskab-fordel i {
+    font-size: 4rem;
+    color: var(--Secondary);
+
+    margin-bottom: 1rem;
+}
+
+.selskab-fordel h3 {
+    margin-bottom: 1rem;
+}
+
+/* Selskabmedia queries */
+@media (max-width: 768px) {
+
+    .selskab-fordele {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 4rem 0;
+    }
+
+    .selskab-fordel i {
+        font-size: 3rem;
+    }
+
+    .selskab-info {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .selskab-info-content {
+        padding: 2rem;
+    }
+
+    .selskab-info-content .book-bord {
+        display: none;
+    }
+
+    .selskab-info img {
+        height: 300px;
+    }
+
+    .madudafhuset-kontakt {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .madudafhuset-form {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+/* Faciliteter */
+
+.selskab-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    background-color: white;
+    box-shadow: var(--buttonShadow);
+
+    margin-bottom: 6rem;
+    height: 550px;
+}
+
+.selskab-info-content {
+    padding: 3rem;
+}
+
+.selskab-faciliteter {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.selskab-faciliteter li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.selskab-faciliteter i {
+    color: var(--Secondary);
+    font-size: 1rem;
+}
+
+
+.selskab-info-content h3 {
+    margin-bottom: 1rem;
+}
+
+.selskab-info-content p {
+    margin-bottom: 2rem;
+}
+
+.selskab-info img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* Hold selskab SLUT */
+
+/* Mad til festen */
+
+/* Menu */
+
+.madtilfesten-menu {
+    margin: 6rem 0;
+}
+
+.madtilfesten-menu h2 {
+    margin: 0 auto 4rem;
+}
+
+.madtilfesten-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem 4rem;
+}
+
+.madtilfesten-menu-kategori {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 100px;
+    gap: 1rem;
+
+    border-top: 2px solid var(--Blue);
+    padding-top: 1.5rem;
+}
+
+.madtilfesten-menu-kategori h3 {
+    margin-bottom: 1rem;
+}
+
+.madtilfesten-menu-kategori ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.madtilfesten-menu-kategori li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.madtilfesten-menu-kategori p {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.menu-underoverskrift {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.menu-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.menu-priser {
+    font-family: "Montserrat", sans-serif;
+}
+
+.madtilfesten-menu-kategori img {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    justify-self: end;
+    align-self: start;
+}
+
+/* Bestil mad */
+
+.bestilmad {
+    margin: 6rem 0;
+}
+
+.bestilmad h2 {
+    margin: 0 auto 5rem;
+}
+
+.bestilmad-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bestilmad-card {
+    min-height: 300px;
+}
+
+.bestilmad-card .event-content {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.bestilmad-card .event-buttons {
+    justify-content: center;
+}
+
+/* Mad til fest Media queries */
+
+@media (max-width: 768px) {
+
+    .madtilfesten-menu {
+        margin: 4rem 0;
+    }
+
+    .madtilfesten-menu h2 {
+        margin-bottom: 2rem;
+    }
+
+    .madtilfesten-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .madtilfesten-menu-kategori {
+        grid-template-columns: 1fr 90px;
+    }
+
+    .bestilmad-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mad til festen SLUT */
+
+/* TOGO START */
+
+/* Skolemad og Frokost To Go */
+
+.frokost-menu {
+    margin: 6rem 0;
+}
+
+.frokost-menu h2 {
+    margin: 0 auto 4rem;
+}
+
+.frokost-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 5rem;
+}
+
+.frokost-menu-kategori {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: var(--largeGap);
+
+    border-top: 2px solid var(--Blue);
+    padding-top: 1rem;
+}
+
+.frokost-menu-kategori h3 {
+    margin-bottom: var(--smallGap);
+}
+
+.frokost-pris {
+    font-weight: 600;
+    margin-bottom: var(--medGap);
+}
+
+.frokost-underoverskrift {
+    font-weight: 600;
+    margin: var(--medGap) 0 var(--smallGap);
+}
+
+.frokost-menu-kategori ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.frokost-menu-kategori li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.frokost-menu-kategori img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    justify-self: end;
+    align-self: center;
+}
+
+.frokost-ekstra-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--largeGap);
+    text-align: center;
+}
+
+.frokost-ekstra {
+    border-left: 2px dotted var(--Blue);
+    padding-left: var(--largeGap);
+}
+
+.frokost-ekstra:first-child {
+    border-left: none;
+}
+
+.frokost-ekstra img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: var(--smallGap);
+}
+
+.frokost-ekstra h3 {
+    font-size: 1rem;
+}
+
+/* Bestil frokost */
+
+.bestilfrokost {
+    margin: 6rem 0;
+}
+
+.bestilfrokost h2 {
+    margin: 0 auto 5rem;
+}
+
+.bestilfrokost-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bestilfrokost-card {
+    min-height: 420px;
+}
+
+.bestilfrokost-card .event-content {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.bestilfrokost-card .event-buttons {
+    justify-content: center;
+}
+
+.bestilfrokost-subtitle {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: var(--smallGap);
+}
+
+/* Togo media queries */
+
+@media (max-width: 768px) {
+
+    .frokost-menu {
+        margin: 4rem 0;
+    }
+
+    .frokost-menu h2,
+    .bestilfrokost h2 {
+        margin-bottom: 2rem;
+    }
+
+    .frokost-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .frokost-menu-kategori {
+        grid-template-columns: 1fr 90px;
+    }
+
+
+    .frokost-ekstra-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .frokost-ekstra {
+        min-width: 150px;
+
+        padding-left: 0;
+
+    }
+
+    .bestilfrokost-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bestilfrokost-card {
+        min-height: auto;
+    }
+}
+
+/* TOGO SLUT */
+
+/* Loading animation */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background-color: #F5EFEC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Blue);
+    z-index: 9999;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+
+}
+
+#loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#loader p {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+
+    animation: blink 1.5s infinite;
+}
+
+@keyframes boat {
+    0% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+#loader img {
+    width: 300px;
+    animation: boat 3s ease-in-out infinite;
+    padding: 1rem;
+}
+
+@keyframes boat {
+    0% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+/* Loading animation SLUT */
+    outline: none; 
+}
