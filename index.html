@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Mallemukken</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <script src="./assets/js/app.js" defer></script>
+  <script src="./assets/js/index.js" defer></script>
 </head>
 
 <body>
@@ -16,6 +17,7 @@
   <a href="./index.html" class="active">
 	<img class="mallemukkenlogo" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukken logo">
   </a>
+  <!-- https://www.w3schools.com/HOWTO/howto_js_mobile_navbar.asp -->
   <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	<i class="fa fa-bars"></i>
@@ -29,11 +31,195 @@
     <a href="./omos.html">Om os</a>
 
     <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
-    <!-- <button class="book-bord">Book Bord</button> -->
   </div>
 </div>
 </nav>
 
+<header>
+  <div class="hero-images">
+    <picture>
+      <source type="image/webp"
+        srcset="
+        ./assets/img/hero-billede-forsiden_800.webp 800w,
+        ./assets/img/hero-forside_1920.webp 1920w">
+      <img 
+          src="./assets/img/hero-billede-forsiden_800.webp"
+          sizes="100vw" 
+          alt="Billede indefra Mallemukken"
+          loading="eager">
+    </picture>
+  </div>
+
+  <div class="hero-btn">
+    <img class="hero-logo" src="./assets/img/Mallemukken_logo_hvid.svg" alt="Mallemukkens logo">
+    
+    <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
+
+    <a class="giftcardbtn" href="#">Køb gavekort</a>
+  </div>
+  
+  <div class="showmore">
+    <p>Udforsk mere</p>
+    <i class="fa-solid fa-arrow-down"></i>
+  </div>
+</header>
+
+<main>
+  <section class="hvadvitilbyder">
+    <div class="header-hvadvitilbyder">
+      <h2>Hvad vi tilbyder</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="focused-entry-slideshow-container">
+      <div class="myslides fade">
+        <a href="./menu.html" 
+        class="tekst-indhold"> 
+        <h3>Vores menukort</h3>
+        <p>Se vores spændende menukort</p>
+        <picture>
+          <source type="image/webp"
+          srcset="
+          ./assets/img/vores-menukort_640.webp 640w,
+          ./assets/img/menukort-billede_800.webp 800w">
+          
+          <img 
+          src="./assets/img/menukort-billede_800.webp"
+          sizes="100vw" 
+          alt="Mallemukkens menukort"
+          loading="lazy">
+        </picture>
+        </a>
+      </div>
+
+      <div class="myslides fade">
+          <a href="./arrangementer.html" class="tekst-indhold">
+            <h3>Hold dit næste selskab hos os</h3>
+            <p>Vi tilbyder hyggelige rammer til både små og store arrangementer....</p>
+            <picture>
+              <source type="image/webp"
+              srcset="
+              ./assets/img/selskab_640.webp 640w,
+              ./assets/img/selskab_800.webp 800w">
+              
+              <img 
+              src="./assets/img/selskab_800.webp"
+              sizes="100vw" 
+              alt="Hold selskaber hos os"
+              loading="lazy">
+            </picture>
+          </a>
+        </div>
+        
+        <div class="myslides fade">
+          <a href="./madudafhuset.html" class="tekst-indhold">
+            <h3>Mad ud af huset</h3>
+            <p>Vi leverer mad ud af....</p>
+            <picture>
+              <source type="image/webp"
+              srcset="
+              ./assets/img/madudafhuset_640.webp 640w,
+              ./assets/img/Madudafhuset_800.webp 800w">
+              
+              <img 
+              src="./assets/img/Madudafhuset_800.webp"
+              sizes="100vw" 
+              alt="Se hvad Mallemukken tilbyder af mad ud af huset"
+              loading="lazy">
+            </picture>  
+          </a>
+        </div>
+        <!-- Sliderknap -->
+        <button class="slide-next" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
+        <div class="slide-progress">
+          <div class="slide-progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+  </section>
+  
+  <!-- Nyheder -->
+  <section class="nyheder-container ">
+    <div class="header-nyheder">
+      <h2>Nyheder</h2>
+      <div class="line"></div>
+    </div>
+    <div class="nyheder-grid"></div>
+  </section>
+
+
+  <!-- Oplevelse -->
+   <section class="oplevelse-container">
+    <div class="header-oplevelse">
+      <h2>Oplevelse</h2>
+      <div class="line"></div>
+    </div>
+
+    <article class="oplevelse-container">
+      <div class="oplevelse-card">
+        <div class="oplevelseindhold">
+          <h3>Rating</h3>
+          <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
+          <p>"En uforglemmelig aften. Maden var kunstnerisk og servicen helt i top. Den bedste stjerneskud jeg har smagt."</p>
+          <span><p>- Michael Jensen</p></span>
+        </div>
+      </div>
+
+      <div class="oplevelse-card">
+        <div class="oplevelseindhold">
+          <h3>Rating</h3>
+          <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
+          <p>"Elegance og ro. Mallenmukken formår at skabe en atmosfære, hvor man føler sig helt speciel fra man træder ind."
+          </p>
+          <span><p>- Sille Madsen</p></span>
+        </div>
+      </div>
+
+      <div class="oplevelse-card">
+        <div class="oplevelseindhold">
+          <h3>Rating</h3>
+          <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
+          <p>"Menuen er en sand opdagelsesrejse. Hver ret overrasker med nye smagsnuancer fra det dybe hav."</p>
+          <span><p>- Anders Holm</p></span>
+        </div>
+      </div>
+
+      <div class="oplevelse-card">
+        <div class="oplevelseindhold">
+          <h3>Rating</h3>
+          <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
+          <p>“Super hyggeligt sted med fantastisk atmosfære. Venlig og sød betjening og dejlig mad.”</p>
+          <span><p>- Martin Jensen</p></span>
+        </div>
+      </div>
+
+      <div class="oplevelse-card">
+        <div class="oplevelseindhold">
+          <h3>Rating</h3>
+          <img src="./assets/img/Stjerner-rating.svg" alt="En anmelder der beskriver sin oplevelse på Mallemukken">
+          <p>“Fantastisk oplevelse, fantastisk fiske buffet venlig smilende personale, helt igennem en fantastisk oplevelse vi kommer helt sikkert igen en anden gang”</p>
+          <span><p>- Harald P</p></span>
+        </div>
+      </div>
+
+    </article>
+    <div class="dots-oplevelse-container">
+      <span class="dot" onclick="currentslide(1)"></span>
+      <span class="dot" onclick="currentslide(2)"></span>
+      <span class="dot" onclick="currentslide(3)"></span>
+      <span class="dot" onclick="currentslide(4)"></span>
+      <span class="dot" onclick="currentslide(5)"></span>
+    </div>
+   </section>
+
+   <section class="aktuelletilbud-container">
+    <div class="header-akutelletilbud">
+      <h2>Andre aktuelle tilbud</h2>
+      <div class="line"></div>
+    </div>
+   </section>
+  </main>
+  <!-- Til top knap -->
+  <button onclick="topFunction()" id="mytopbtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
 <footer>
   <div class="footer-grid">
