@@ -1,332 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Læs Mallemukkens historie">
-    <title>Om os</title>
-     <link rel="stylesheet" href="./assets/css/style.css">
-     <link rel="stylesheet" href="./assets/css/omOs.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-     <script src="./assets/js/app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Læs Mallemukkens historie">
+  <title>Om os</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/omOs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="./assets/js/app.js" defer></script>
 </head>
+
 <body>
-<nav>
-	<div class="topnav">
-  <a href="./index.html" class="active">
-	<img class="mallemukkenlogo" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukken logo">
-  </a>
-  <!-- https://www.w3schools.com/HOWTO/howto_js_mobile_navbar.asp -->
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-	<i class="fa fa-bars"></i>
-  </a>
-  <!-- Navigation links (hidden by default) -->
-  <div id="myLinks">
-    <a href="./menu.html">Menu</a>
-    <a href="./arrangement.html">Arrangementer</a>
-    <a href="./madudafhuset.html">Mad ud af huset</a>
-    <a href="./holdselskab.html">Hold selskab</a>
-    <a href="./omos.html">Om os</a>
+  <nav>
+    <div class="topnav">
+      <a href="./index.html" class="active">
+        <img class="mallemukkenlogo" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukken logo">
+      </a>
+      <!-- https://www.w3schools.com/HOWTO/howto_js_mobile_navbar.asp -->
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="./menu.html">Menu</a>
+        <a href="./arrangement.html">Arrangementer</a>
+        <a href="./madudafhuset.html">Mad ud af huset</a>
+        <a href="./holdselskab.html">Hold selskab</a>
+        <a href="./omos.html">Om os</a>
 
-    <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
-  </div>
-</div>
-</nav>
-
-
-
-  <!-- ─── HERO ─── -->
-  <section class="hero">
-    <img class="hero-bg" src="./assets/img/mallemukken-bygning.png" alt="Mallemukken bygning">
-    <div class="hero-content">
-      <h1>Om os</h1>
-      <p>Mallemukkens historie</p>
-    </div>
-
-    <div class="showmore">
-    <p>Udforsk mere</p>
-    <i class="fa-solid fa-arrow-down"></i>
-  </div>
-  </section>
-
-
-
-  <!-- ─── HVEM VI ER ─── -->
-  <section class="about-section">
-    <div class="about-text">
-      <h2>Hvem vi er</h2>
-      <p>
-        <span class="red">Restaurant Mallemukken</span> drives af Sophie og Kasper Byskov
-        sammen med et dedikeret team af medarbejdere. Hver dag arbejder vi for at skabe gode
-        oplevelser med nærvær, kvalitet og ægte vestjysk gæstfrihed.
-      </p>
-      <p>
-        Hos os er god mad, personlig service og hyggelige omgivelser fundamentet for en
-        oplevelse, som gæsterne har lyst til at vende tilbage til.
-      </p>
-      <hr class="divider" />
-      <p>
-        <span class="red">Mallemukken</span> er bygget op omkring to tidligere
-        <span class="red">fiskekuttere</span>, som i dag danner restaurantens karakteristiske
-        tag. Den ene båd bar navnet Mallemukken, som restauranten senere blev opkaldt efter.
-        Restauranten er et symbol på Thyborøns stærke tilknytning til fiskeriet og havet.
-        Efter branden i 2019 blev Mallemukken genopbygget med respekt for stedets historie og
-        maritime identitet.
-      </p>
-      <hr class="divider" />
-      <p>
-        Vores <span class="red">personale</span> er en vigtig del af Mallemukken. Med smil,
-        engagement og lokalkendskab står vi klar til at tage imod både lokale gæster og
-        besøgende fra nær og fjern.
-      </p>
-    </div>
-    <div class="about-images">
-      <!-- Stor: cyklisterne foran restauranten ved solnedgang -->
-      <img class="img-full" src="./assets/img/fromDam.png" alt="Restauranten set fra dæmningen">
-      <!-- Lille venstre: personale/bar -->
-      <img class="img-half" src="./assets/img/personale.png" alt="Personale bar">
-      <!-- Lille højre: skibet / ny bygning -->
-      <img class="img-half" src="./assets/img/InsideMM.png" alt="Skibet Mallemukken">
-    </div>
-  </section>
-
-  <!-- ─── VORES HISTORIE ─── -->
-  <section class="history-section">
-    <h2>Vores historie</h2>
-    <div class="timeline-wrapper">
-      
-      <!-- Dots (kun desktop) -->
-      <div class="timeline-dots">
-        <div class="timeline-dot-item">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-dot-item">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-dot-item">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-dot-item">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-dot-item">
-          <div class="dot"></div>
-        </div>
-        <div class="timeline-dot-item">
-          <div class="dot"></div>
-        </div>
+        <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
       </div>
-      
-      <!-- Items med billede indlejret -->
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <div class="year">1862</div>
-          <div>
-            <h3>Thyborøn opstår</h3>
-            <p>Gennembruddet af Agger Tange skaber forbindelsen mellem Limfjorden og havet og lægger begyndelsen på
-              Thyborøns udvikling.</p>
-            <img src="./assets/img/konstruktion.png" alt="Thyborøn 1862">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">1918</div>
-          <div>
-            <h3>Fiskebyen vokser</h3>
-            <p>Havnen vokser og bliver gennem de næste årtier et vigtigt centrum for dansk fiskeri.</p>
-            <img src="./assets/img/bNw.png" alt="Fiskehallen 1918">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">2000</div>
-          <div>
-            <h3>Mallemukken bliver til</h3>
-            <p>Idéen om en restaurant bygget op omkring en gammel fiskekutte bliver realiseret og skaber et unikt
-              vartegn for Thyborøn.</p>
-            <img src="./assets/img/redbarr.png" alt="De Røde Barakker 2000">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">2019</div>
-          <div>
-            <h3>Branden</h3>
-            <p>Efter anden båd 'Port Said' blev lagt til, rammes restauranten af brand. Men de to ikoniske kuttere
-              overlever og bevarer stedets særlige identitet.</p>
-            <img src="./assets/img/MMbrand.png" alt="Branden 2019">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">2020</div>
-          <div>
-            <h3>En ny begyndelse</h3>
-            <p>Mallemukken genopbygges af Sophie og Kasper Byskov med respekt for historien og de maritime omgivelser.
-            </p>
-            <img src="./assets/img/newBeg.png" alt="Ny bygning 2020">
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="year">I dag</div>
-          <div>
-            <h3>Historien lever videre</h3>
-            <p>Gæster fra nær og fjern samles under kutterne og oplever smagen af Thyborøn.</p>
-            <img src="./assets/img/historie.png" alt="Mallemukken i dag">
-          </div>
-        </div>
+    </div>
+  </nav>
+
+
+
+  <header>
+
+    <section class="hero">
+      <img class="hero-bg" src="./assets/img/mallemukken-bygning.png" alt="Mallemukken bygning">
+      <div class="hero-content">
+        <h1>Om os</h1>
+        <p>Mallemukkens historie</p>
       </div>
 
-
-
-    </div>
-  </section>
-  <!-- ─── TA' ET MINDE MED HJEM ─── -->
-  <section class="souvenir-section">
-    <div class="souvenir-text">
-      <h2>Ta' et minde med hjem</h2>
-      <div class="souvenir-image">
-        <!-- Saltflaske-billedet -->
-        <img src="./assets/img/MMshop.png" alt="Souvenirs og specialiteter i butikken">
+      <div class="showmore">
+        <p>Udforsk mere</p>
+        <i class="fa-solid fa-arrow-down"></i>
       </div>
-      <p>
-        I vores butik finder du et udvalg af specialiteter, souvenirs og maritime produkter
-        inspireret af Thyborøn og livet ved havet. Perfekt som gave eller som et minde om
-        besøget hos Mallemukken.
-      </p>
-      <a href="#" class="btn-outline-white">Send forespørgsel</a>
-    </div>
-  </section>
+    </section>
 
-    <!-- Til top knap -->
+  </header>
+
+  <main>
+
+    <section class="about-section">
+      <div class="about-text">
+        <h2>Hvem vi er</h2>
+        <p>
+          <span class="red">Restaurant Mallemukken</span> drives af Sophie og Kasper Byskov
+          sammen med et dedikeret team af medarbejdere. Hver dag arbejder vi for at skabe gode
+          oplevelser med nærvær, kvalitet og ægte vestjysk gæstfrihed.
+        </p>
+        <p>
+          Hos os er god mad, personlig service og hyggelige omgivelser fundamentet for en
+          oplevelse, som gæsterne har lyst til at vende tilbage til.
+        </p>
+        <hr class="divider" />
+        <p>
+          <span class="red">Mallemukken</span> er bygget op omkring to tidligere
+          <span class="red">fiskekuttere</span>, som i dag danner restaurantens karakteristiske
+          tag. Den ene båd bar navnet Mallemukken, som restauranten senere blev opkaldt efter.
+          Restauranten er et symbol på Thyborøns stærke tilknytning til fiskeriet og havet.
+          Efter branden i 2019 blev Mallemukken genopbygget med respekt for stedets historie og
+          maritime identitet.
+        </p>
+        <hr class="divider" />
+        <p>
+          Vores <span class="red">personale</span> er en vigtig del af Mallemukken. Med smil,
+          engagement og lokalkendskab står vi klar til at tage imod både lokale gæster og
+          besøgende fra nær og fjern.
+        </p>
+      </div>
+      <div class="about-images">
+        <img class="img-full" src="./assets/img/fromDam.png" alt="Restauranten set fra dæmningen">
+        <img class="img-half" src="./assets/img/personale.png" alt="Personale bar">
+        <img class="img-half" src="./assets/img/InsideMM.png" alt="Skibet Mallemukken">
+      </div>
+    </section>
+
+
+    <section class="history-section">
+      <h2>Vores historie</h2>
+      <div class="timeline-wrapper">
+
+
+        <div class="timeline-dots">
+          <div class="timeline-dot-item">
+            <div class="dot"></div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot"></div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot"></div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot"></div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot"></div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot"></div>
+          </div>
+        </div>
+
+
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="year">1862</div>
+            <div>
+              <h3>Thyborøn opstår</h3>
+              <p>Gennembruddet af Agger Tange skaber forbindelsen mellem Limfjorden og havet og lægger begyndelsen på
+                Thyborøns udvikling.</p>
+              <img src="./assets/img/konstruktion.png" alt="Thyborøn 1862">
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">1918</div>
+            <div>
+              <h3>Fiskebyen vokser</h3>
+              <p>Havnen vokser og bliver gennem de næste årtier et vigtigt centrum for dansk fiskeri.</p>
+              <img src="./assets/img/bNw.png" alt="Fiskehallen 1918">
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2000</div>
+            <div>
+              <h3>Mallemukken bliver til</h3>
+              <p>Idéen om en restaurant bygget op omkring en gammel fiskekutte bliver realiseret og skaber et unikt
+                vartegn for Thyborøn.</p>
+              <img src="./assets/img/redbarr.png" alt="De Røde Barakker 2000">
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2019</div>
+            <div>
+              <h3>Branden</h3>
+              <p>Efter anden båd 'Port Said' blev lagt til, rammes restauranten af brand. Men de to ikoniske kuttere
+                overlever og bevarer stedets særlige identitet.</p>
+              <img src="./assets/img/MMbrand.png" alt="Branden 2019">
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2020</div>
+            <div>
+              <h3>En ny begyndelse</h3>
+              <p>Mallemukken genopbygges af Sophie og Kasper Byskov med respekt for historien og de maritime omgivelser.
+              </p>
+              <img src="./assets/img/newBeg.png" alt="Ny bygning 2020">
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">I dag</div>
+            <div>
+              <h3>Historien lever videre</h3>
+              <p>Gæster fra nær og fjern samles under kutterne og oplever smagen af Thyborøn.</p>
+              <img src="./assets/img/historie.png" alt="Mallemukken i dag">
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <section class="souvenir-section">
+      <div class="souvenir-text">
+        <h2>Ta' et minde med hjem</h2>
+        <div class="souvenir-image">
+          <img src="./assets/img/MMshop.png" alt="Souvenirs og specialiteter i butikken">
+        </div>
+        <p>
+          I vores butik finder du et udvalg af specialiteter, souvenirs og maritime produkter
+          inspireret af Thyborøn og livet ved havet. Perfekt som gave eller som et minde om
+          besøget hos Mallemukken.
+        </p>
+        <a href="#" class="btn-outline-white">Send forespørgsel</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Til top knap -->
   <button onclick="topFunction()" id="mytopbtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
   <!-- Footer -->
-<footer>
-  <div class="footer-grid">
+  <footer>
+    <div class="footer-grid">
 
-    <!-- Kontakt -->
-    <div class="kontakt-container">
-      <div class="medie-container">
-        <a href="./index.html">
-          <img class="logo-footer" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukkens logo" loading="lazy">
-        </a>
-        <div class="sociale-links">
-          <a href="https://www.facebook.com/mallemukken.dk/">
-            <i class="fa-brands fa-facebook-f"></i></a>
+      <!-- Kontakt -->
+      <div class="kontakt-container">
+        <div class="medie-container">
+          <a href="./index.html">
+            <img class="logo-footer" src="./assets/img/Mallemukken_logo_farve.svg" alt="Mallemukkens logo"
+              loading="lazy">
+          </a>
+          <div class="sociale-links">
+            <a href="https://www.facebook.com/mallemukken.dk/">
+              <i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/restaurantmallemukken">
               <i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
-          
-          <div class="kontaktoplysning">
-            <div class="header-kontakt">
-              <i class="fa-solid fa-phone"></i>
-              <h3>Kontakt</h3>
-            </div>
-            <p><a href="tel:+4542800527">+4542800527</a></p>
-            <p><a href="mailto:mail@mallemukken.dk">Mail: mallemukken.dk</a></p>
-            <p>Adresse: Mallemukken - Restaurant & Café, Kystcentervej 1, 7680 Thyborøn, Denmark</p>
-            <p>CVR: 39972859</p>
-          </div>
-          
-          <div class="kontrol-bookbord-knap">
-            <a href="https://www.findsmiley.dk/974501">
-              <img src="./assets/img/kontrolrapport_logo.svg" alt="Mallenmukkens kontrol" loading="lazy">
-            </a>
-            <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
           </div>
         </div>
 
-        <!-- Åbningstider -->
-        <div class="openinghours-container">
-          <div class="header-openinghours">
-            <i class="fa-regular fa-clock"></i>
-            <h3>Åbningstider</h3>
+        <div class="kontaktoplysning">
+          <div class="header-kontakt">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Kontakt</h3>
           </div>
-          
-          <div class="openinghours">
-            <div class="opening-datoer">
-              <h4>Fra 27. Marts - 17. Juni</h4>
-              <p>Mandag-torsdag 11:30-16:00</p>
-              <p>Fredag-lørdag 11:30-21:00</p>
-              <p>Søndag 11:30-16:00</p>
-            </div>
-            
-            <div class="opening-datoer">
-              <h4>Fra 18. Juni - 8. August</h4>
-              <p>Mandag-torsdag 11:30-21:00</p>
-              <p>Fredag-lørdag 11:30-22:00</p>
-              <p>Søndag 11:30-21:00</p>
-            </div>
-            
-            <div class="opening-datoer">
-              <h4>Fra 9. August - 17. Oktober</h4>
-              <p>Mandag-torsdag 11:30-16:00</p>
-              <p>Fredag-lørdag 11:30-21:00</p>
-              <p>Søndag 11:30-16:00</p>
-            </div>
-            
-            <div class="ekstra-oplysninger">
-              <p>*Ændringer kan forekomme i forbindelse med helligdage og private fester</p>
-              
-              <p>*Sæson nedlukning <span>d. 17. Oktober 2026 og indtil 19. Marts 2027</span> med undtagelse af juleweekenden og andre arrangementer</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- FAQ -->
-        <!-- Accordions er lavet ud fra W3S https://www.w3schools.com/howto/howto_js_accordion.asp  -->
-        <div class="FAQ-container">
-          <div class="header-faq">
-            <i class="fa-regular fa-circle-question"></i>
-            <h3>Ofte stillede spørgsmål</h3>
-          </div>
-          
-          <!-- Accordions -->
-          <div class="accordions-container">
-            <div class="accordion-item">
-              <button class="accordion">Hvornår har i buffet?</button>
-              <div class="panel">
-                <p>Vi tilbyder buffet på udvalgte datoer. Se kommende datoer og menu under “Mallemukkens buffet.</p>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button class="accordion">Tager i højde for allergier?</button>
-              <div class="panel">
-                <p>Ja, vi tager hensyn til allergier. Vi anbefaler, at du henvender dig til personalet, så vi kan vejlede dig om vores retter.</p>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <button class="accordion">Tilbyder i takeaway?</button>
-              <div class="panel">
-                <p>Ja, vi tilbyder takeaway. Du kan se vores udvalg og bestille fra menuen.</p>
-              </div>
-            </div>
-          </div>
+          <p><a href="tel:+4542800527">+4542800527</a></p>
+          <p><a href="mailto:mail@mallemukken.dk">Mail: mallemukken.dk</a></p>
+          <p>Adresse: Mallemukken - Restaurant & Café, Kystcentervej 1, 7680 Thyborøn, Denmark</p>
+          <p>CVR: 39972859</p>
         </div>
 
-        <div class="lokation">
-          <div class="headerlokation">
-            <i class="fa-solid fa-location-dot"></i>
-            <h3>Lokation</h3>
-          </div>
-            <!-- Embeded kort fra google maps -->
-            <iframe class="kort" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.2077230410414!2d8.210300723789604!3d56.705023053564894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649f4fa5b65f3eb%3A0xa6042b13bc29f9ac!2sRestaurant%20Mallemukken!5e0!3m2!1sda!2sdk!4v1780576270541!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-    
-        <!-- Genveje -->
-        <div class="genveje-container">
-          <div class="header-genveje">
-            <i class="fa-solid fa-link"></i>
-            <h3>Genveje</h3>
-          </div>
-          
-          <div class="genveje-link">
-            <a href="#"><p>Surf and work</p></a>
-            <a href="./arrangementer.html"><p>Arrangementer</p></a>
-            <a href="./madudafhuset.html"><p>Mad ud af huset</p></a>
-          </div>
+        <div class="kontrol-bookbord-knap">
+          <a href="https://www.findsmiley.dk/974501">
+            <img src="./assets/img/kontrolrapport_logo.svg" alt="Mallenmukkens kontrol" loading="lazy">
+          </a>
+          <a class="book-bord" href="https://book.easytable.com/book/?id=5f508&lang=da">Book Bord</a>
         </div>
-        
       </div>
-      </footer>
+
+      <!-- Åbningstider -->
+      <div class="openinghours-container">
+        <div class="header-openinghours">
+          <i class="fa-regular fa-clock"></i>
+          <h3>Åbningstider</h3>
+        </div>
+
+        <div class="openinghours">
+          <div class="opening-datoer">
+            <h4>Fra 27. Marts - 17. Juni</h4>
+            <p>Mandag-torsdag 11:30-16:00</p>
+            <p>Fredag-lørdag 11:30-21:00</p>
+            <p>Søndag 11:30-16:00</p>
+          </div>
+
+          <div class="opening-datoer">
+            <h4>Fra 18. Juni - 8. August</h4>
+            <p>Mandag-torsdag 11:30-21:00</p>
+            <p>Fredag-lørdag 11:30-22:00</p>
+            <p>Søndag 11:30-21:00</p>
+          </div>
+
+          <div class="opening-datoer">
+            <h4>Fra 9. August - 17. Oktober</h4>
+            <p>Mandag-torsdag 11:30-16:00</p>
+            <p>Fredag-lørdag 11:30-21:00</p>
+            <p>Søndag 11:30-16:00</p>
+          </div>
+
+          <div class="ekstra-oplysninger">
+            <p>*Ændringer kan forekomme i forbindelse med helligdage og private fester</p>
+
+            <p>*Sæson nedlukning <span>d. 17. Oktober 2026 og indtil 19. Marts 2027</span> med undtagelse af
+              juleweekenden og andre arrangementer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <!-- Accordions er lavet ud fra W3S https://www.w3schools.com/howto/howto_js_accordion.asp  -->
+      <div class="FAQ-container">
+        <div class="header-faq">
+          <i class="fa-regular fa-circle-question"></i>
+          <h3>Ofte stillede spørgsmål</h3>
+        </div>
+
+        <!-- Accordions -->
+        <div class="accordions-container">
+          <div class="accordion-item">
+            <button class="accordion">Hvornår har i buffet?</button>
+            <div class="panel">
+              <p>Vi tilbyder buffet på udvalgte datoer. Se kommende datoer og menu under “Mallemukkens buffet.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion">Tager i højde for allergier?</button>
+            <div class="panel">
+              <p>Ja, vi tager hensyn til allergier. Vi anbefaler, at du henvender dig til personalet, så vi kan vejlede
+                dig om vores retter.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion">Tilbyder i takeaway?</button>
+            <div class="panel">
+              <p>Ja, vi tilbyder takeaway. Du kan se vores udvalg og bestille fra menuen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lokation">
+        <div class="headerlokation">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Lokation</h3>
+        </div>
+        <!-- Embeded kort fra google maps -->
+        <iframe class="kort"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3176.2077230410414!2d8.210300723789604!3d56.705023053564894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649f4fa5b65f3eb%3A0xa6042b13bc29f9ac!2sRestaurant%20Mallemukken!5e0!3m2!1sda!2sdk!4v1780576270541!5m2!1sda!2sdk"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Genveje -->
+      <div class="genveje-container">
+        <div class="header-genveje">
+          <i class="fa-solid fa-link"></i>
+          <h3>Genveje</h3>
+        </div>
+
+        <div class="genveje-link">
+          <a href="#">
+            <p>Surf and work</p>
+          </a>
+          <a href="./arrangementer.html">
+            <p>Arrangementer</p>
+          </a>
+          <a href="./madudafhuset.html">
+            <p>Mad ud af huset</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 </body>
 
 </html>

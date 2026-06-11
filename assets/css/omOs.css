@@ -56,7 +56,6 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
   object-position: center;
 }
 
@@ -65,6 +64,11 @@ a {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
+
+}
+
+header::after {
+  display: none !important;
 }
 
 .hero-content {
@@ -223,52 +227,58 @@ a {
 }
 
 
-    /* shop / ta et minde med hjem */
-    .souvenir-section {
-      background: var(--Secondary);
-      color: #fff;
-      padding: 64px 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* Ingen variabel bred nok, så brugte et andet gap her */
-      gap: 80px;
-    }
-    .souvenir-text {
-      max-width: 420px;
-    }
-    .souvenir-text h2 {
-      font-size: 28px;
-      margin-bottom: 18px;
-    }
-    .souvenir-text p {
-      font-size: 14px;
-      line-height: 1.8;
-      opacity: 0.92;
-      margin-bottom: 28px;
-    }
-    .btn-outline-white {
-      display: inline-block;
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 10px 26px;
-      border-radius: 4px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.2s, color 0.2s;
-      box-shadow: var(--buttonShadow);
-    }
-    .btn-outline-white:hover {
-      background: #fff;
-      color: var(--Secondary);
-    }
-    .souvenir-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 6px;
-    }
+/* shop / ta et minde med hjem */
+.souvenir-section {
+  background: var(--Secondary);
+  color: #fff;
+  padding: 64px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ingen variabel bred nok, så brugte et andet gap her */
+  gap: 80px;
+}
+
+.souvenir-text {
+  max-width: 420px;
+}
+
+.souvenir-text h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.souvenir-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.92;
+  margin-bottom: 28px;
+}
+
+.btn-outline-white {
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: var(--buttonShadow);
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--Secondary);
+}
+
+.souvenir-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
 /* media queries */
 @media (min-width: 1440px) {
@@ -279,7 +289,7 @@ a {
 
   .history-section {
     padding: 80px 40px;
-    }
+  }
 
   .timeline-item p {
     height: 98px;
@@ -292,141 +302,141 @@ a {
 }
 
 
-  @media (min-width: 1080px) {
-    /* nav {
+@media (min-width: 1080px) {
+  /* nav {
       padding: 14px 24px;
     } */
 
-    .timeline-items {
+  .timeline-items {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: var(--medGap);
     margin-top: 20px;
     text-align: left;
-    }
-
-    .timeline-item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .about-section {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      margin: 48px auto;
-    }
-
-    .souvenir-section {
-      flex-direction: column;
-      gap: 40px;
-      padding: 48px 32px;
-    }
-
-    .souvenir-image img {
-      width: 100%;
-    }
   }
 
-  @media (max-width: 468px) {
-    .nav-links {
-      display: none;
-    }
-
-    .hero-content h1 {
-      font-size: 30px;
-    }
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
   }
 
-
-  /* Mobil vertikal tidslinje */
-  @media (max-width: 468px) {
-    .history-section {
-      padding: 60px 24px;
-    }
-
-    /* Skjul de separate dot- og photo-rækker på mobil */
-    .timeline-dots,
-    .timeline-photos,
-    .timeline-dot-item {
-      display: none;
-    }
-
-    /* Lav tidslinjen til en vertikal liste */
-    .timeline-items {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin-top: 0;
-      position: relative;
-    }
-
-    /* Den lodrette linje  */
-    .timeline-items::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 20px;
-      width: 2px;
-      background: var(--Secondary);
-      z-index: 0;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 16px;
-      padding: 0 0 36px 0;
-      position: relative;
-    }
-
-    /* Dot til venstre for hvert punkt */
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: 13px;
-      top: 4px;
-      width: 16px;
-      height: 16px;
-      background: var(--Secondary);
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .timeline-item .year {
-      font-size: 13px;
-      padding-top: 2px;
-      text-align: right;
-      padding-right: 8px;
-    }
-
-    .timeline-item h3 {
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-
-    .timeline-item p {
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    /* Foto under teksten for hvert punkt */
-    .timeline-item img {
-      grid-column: 2 / 3;
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-
-    .about-section {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .year {
-      padding-left: 30px;
-    }
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 48px auto;
   }
+
+  .souvenir-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 48px 32px;
+  }
+
+  .souvenir-image img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 468px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+}
+
+
+/* Mobil vertikal tidslinje */
+@media (max-width: 468px) {
+  .history-section {
+    padding: 60px 24px;
+  }
+
+  /* Skjul de separate dot- og photo-rækker på mobil */
+  .timeline-dots,
+  .timeline-photos,
+  .timeline-dot-item {
+    display: none;
+  }
+
+  /* Lav tidslinjen til en vertikal liste */
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    position: relative;
+  }
+
+  /* Den lodrette linje  */
+  .timeline-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background: var(--Secondary);
+    z-index: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    padding: 0 0 36px 0;
+    position: relative;
+  }
+
+  /* Dot til venstre for hvert punkt */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: var(--Secondary);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .timeline-item .year {
+    font-size: 13px;
+    padding-top: 2px;
+    text-align: right;
+    padding-right: 8px;
+  }
+
+  .timeline-item h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .timeline-item p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Foto under teksten for hvert punkt */
+  .timeline-item img {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .year {
+    padding-left: 30px;
+  }
+}
