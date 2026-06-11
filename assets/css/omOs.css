@@ -284,13 +284,18 @@ a {
   .timeline-item p {
     height: 98px;
   }
+
+  .timeline-items {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 
 
   @media (min-width: 1080px) {
-    nav {
+    /* nav {
       padding: 14px 24px;
-    }
+    } */
 
     .timeline-items {
     display: grid;
