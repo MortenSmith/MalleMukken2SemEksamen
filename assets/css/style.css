@@ -1126,6 +1126,14 @@ header::after {
 
 .book-bord1 {
     color: black;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.book-bord1:hover {
+    background-color: var(--Secondary);
+    color: white;
+    transition: 0.3s;
 }
 
 .event-buttons .book-bord {
