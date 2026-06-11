@@ -72,7 +72,7 @@ async function getRet(categoryId) {
 
         // Hvis der sker en fejl ved indlæsning, så skal der komme en fejlmeldning. 
     } catch (err) {
-        console.log("Kunne ikke hente retter, prøv at ", err)
+        console.log("Kunne ikke hente retter.", err)
     }
 }
 
